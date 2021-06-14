@@ -35,18 +35,18 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-  - name: "issues"
+  - name: "issue"
     label: "Issue Pages"
     label_singular: "Issue"
-    folder: "site/content/issues"
+    folder: "site/content/issue"
     create: true 
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-  - name: "submissions"
+  - name: "submission"
     label: "Submissions"
     label_singular: "Submission"
-    folder: "site/content/submissions"
+    folder: "site/content/submission"
     create: true 
     i18n: true
     fields:
@@ -68,7 +68,7 @@ collections:
       - {label: "Title", name: "title", widget: "string", i18n: true}
   - name: "settings"
     label: "Site Settings"
-    folder: "site/content/submissions"
+    folder: "site/content/settings"
     create: true 
     i18n: true
     fields:
