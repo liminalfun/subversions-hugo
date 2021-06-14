@@ -1,6 +1,7 @@
 :root {
   /* Colors */
   --white: rbga(255, 255, 255, 1);
+  --gray: rgba(121, 121, 121, 1);
   --black: rgba(43, 37, 35, 1);
   --color-1: rgba(0, 100, 102, 1);
   --color-2: rgba(6, 90, 96, 1);
@@ -15,7 +16,7 @@
 
 	/* Typography */
 	--font-family: Poppins, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-	--font-family-dyslexia: OpenDyslexic, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+	--font-family-dyslexic: OpenDyslexic, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   --line-height: 1.5;
 
 	--font-size: 14px;
