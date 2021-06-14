@@ -85,3 +85,8 @@
 
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
+
+/* Custom Styles */
+@import './customs/_gradient';
+@import './customs/_typography';
+@import './customs/_variables';
