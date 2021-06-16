@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<main>
+  <div class="wrapper">
+    {{ partial "info-text" .Params }}
+
+    <section class="scroll gallery-single-row">
+      {{ range (where .Site.Pages "Type" "issue") }}
+        {{ partial "card-issue" .Params}}
+      {{ end }}
+      {{ range (where .Site.Pages "Type" "pdf-issues") }}
+        {{ partial "card-issue" .Params}}
+      {{ end }}
+    </section>
+  </div>
+</main>
+
+{{ end }}

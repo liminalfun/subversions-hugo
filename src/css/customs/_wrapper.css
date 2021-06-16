@@ -1,28 +1,45 @@
-/* Wrapper with Horizontal Scrolling */
+/* Wrapper with Horizontal Scrolling & Textured Background */
 
 .wrapper {
-  position: relative;
+  /* Spacing & Text Color */
   margin: var(--spacing-large);
   padding: var(--spacing-large);
   color: var(--white);
+
+  /* Background */
   height: calc(100vh - 8rem); // Calculate this to responsively subtract navbar
-  overflow-y: hidden;
-  overflow-x: scroll;
+  background-image: url('/resources/paper.png');
+  border-radius: var(--border-radius);
+  background-size: cover;
+
+  /* Horizontal Scrolling */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  
+
 }
 
+/* Horizontal Scrolling */
 
-/* Wrapper Textured Background */
-
-.wrapper::before {
-  content: '';
-  display: block;
-  position: absolute;
+.noscroll {
+  position: sticky;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius);
-  background-image: url('/img/paper.jpg');
-  background-size: cover;
-  opacity: 0.5;
+  max-width: 40vw;
+}
+
+.scroll {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  > article {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
 }
