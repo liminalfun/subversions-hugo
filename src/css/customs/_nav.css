@@ -12,11 +12,12 @@
 
   a {
     text-decoration: none;
-    transition: color .3s ease;
+    transition: all .5s;
+    border-bottom: .5px solid rgba(255,255,255,0);
   }
 
-  a:hover {
-    color: rgba(121, 121, 121, 1);
+  a:hover, a:active, .active {
+    border-bottom: .5px solid rgba(255, 255, 255, 1);
   }
 
   ul {
