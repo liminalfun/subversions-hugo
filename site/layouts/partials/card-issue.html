@@ -1,7 +1,9 @@
 <a href="{{ .link }}" title="{{ .title }}" alt="{{ .title }}">
-  <article>
+  <article class="card issue">
     <img src="{{.image.image}}" alt="{{ .image.alt }}">
-    <h4>{{ .title }}</h4>
-    <time>{{ .year }}</time>
+    <div class="label">
+      <h4>{{ .title }}</h4>
+      <time>{{ .year }}</time>
+    </div>
   </article>
 </a>

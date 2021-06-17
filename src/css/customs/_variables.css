@@ -13,6 +13,7 @@
   --color-8: rgba(49, 34, 68, 1);
   --color-9: rgba(62, 31, 71, 1);
   --color-10: rgba(77, 25, 77, 1); 
+  --gradient: linear-gradient(to right, var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6), var(--color-7), var(--color-8), var(--color-9), var(--color-10));
 
 	/* Typography */
 	--font-family: Poppins, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
@@ -38,4 +39,5 @@
 	--border-radius: .25rem;
 	--hover-transition: all 150ms ease;
   --op-50: .5;
+  --wrapper-height: calc(100vh - (var(--spacing-extra-large) * 2)); // Calculate this to responsively subtract navbar 
 }

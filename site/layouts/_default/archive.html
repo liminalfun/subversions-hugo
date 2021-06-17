@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-<main>
-  <div class="wrapper">
+<main class="bg-texture">
+  <div class="wrapper grid-col-2">
     {{ partial "info-text" .Params }}
 
     <section class="scroll gallery-single-row">
-      {{ range (where .Site.Pages "Type" "issue") }}
-        {{ partial "card-issue" .Params}}
+      {{ range after 1 (where .Site.Pages "Type" "issue") }}
+        {{ partial "card-issue" .Params }}
       {{ end }}
-      {{ range (where .Site.Pages "Type" "pdf-issues") }}
+      {{ range after 1 (where .Site.Pages "Type" "pdf-issues") }}
         {{ partial "card-issue" .Params}}
       {{ end }}
     </section>

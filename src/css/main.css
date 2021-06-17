@@ -86,10 +86,10 @@
 /*@import './imports/_debug';*/
 
 /* Custom Styles */
-@import './customs/_gradient';
+@import './customs/_bg';
 @import './customs/_typography';
 @import './customs/_variables';
 @import './customs/_nav';
 @import './customs/_telescopic';
-@import './customs/_wrapper';
 @import './customs/_gallery';
+@import './customs/_core';
