@@ -24,32 +24,17 @@ collections:
   - name: "about"
     label: "About Page"
     folder: "site/content/about"
-    create: false
+    create: true 
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Description", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
-      - {label: "Social Media Links", name: "socials", widget: "object", i18n: true, fields: [
-        {label: "Facebook Link", name: "fb", widget: "string", i18n: duplicate, required: false},
-        {label: "Instagram Link", name: "ig", widget: "string", i18n: duplicate, required: false},
-      ]}
-      - {label: "Contact Form", name: "contact", widget: "object", i18n: true, fields: [
-        {label: "Title", name: "title", widget: "string", i18n: true},
-        {label: "Name Label", name: "name", widget: "string", i18n: true},
-        {label: "Email Label", name: "email", widget: "string", i18n: true},
-        {label: "Message Label", name: "message", widget: "string", i18n: true},
-        {label: "Submit Button", name: "submit", widget: "string", i18n: true}
-      ]}
-      - {label: "Credits", name: "credits", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
-
   - name: "archive"
     label: "Archive Page"
     folder: "site/content/archive"
-    create: false
+    create: true 
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Description", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
   - name: "issue"
     label: "Issue Pages"
     label_singular: "Issue"
@@ -58,12 +43,6 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Year", name: "year", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
-      - {label: "Description", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
-      - {label: "Cover Image", name: "image", widget: "object", hint: "for the archive page", i18n: true, fields: [
-        {label: "Image", name: "image", widget: "image", i18n: duplicate, required: false},
-        {label: "Alt Text", name: "alt", widget: "string", i18n: true, required: false}
-      ]}
   - name: "submission"
     label: "Submissions"
     label_singular: "Submission"
@@ -80,12 +59,6 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Year", name: "year", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
-      - {label: "PDF or Link", name: "link", widget: "file", media_folder: "files", i18n: duplicate}
-      - {label: "Cover Image", name: "image", widget: "object", i18n: true, fields: [
-        {label: "Image", name: "image", widget: "image", i18n: duplicate},
-        {label: "Alt Text", name: "alt", widget: "string", i18n: true, required: false}
-      ]}
   - name: "popup"
     label: "Pop-Up Message"
     folder: "site/content/popup"

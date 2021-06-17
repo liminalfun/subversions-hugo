@@ -1,25 +1,19 @@
-<nav class="navbar">
+<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
 
-  <!-- Logo -->
-  <h4><a href="{{ .Site.Home.RelPermalink }}">
-    {{ .Site.Title }}
-  </a></h4>
+	<!-- Logo -->
+	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
+		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
+	</a>
 
-  <!-- Menu Icon -->
-  <div class="nav-icon">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
+	<!-- Primary Nav -->
+	<ul class="flex b grey-3">
+		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
 
-  <!-- Primary Nav -->
-	<ul class="">
-		<li><a href="/issue" class="">current issue</a></li>
-    <li><a href="/archive" class="">archive</a></li>
-    <li><a href="/about" class="">about</a></li>
-    <li><a href="/about#contact" class="">contact</a></li>
-    <li><a href="/" class="">FR</a></li>
+		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
+
+		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
+
+		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
 	</ul>
-
 
 </nav>
