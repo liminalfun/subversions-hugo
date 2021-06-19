@@ -30,7 +30,7 @@ html, body {
   /* Positioning */
   position: fixed;
   left: var(--spacing-large);
-  top: var(--spacing-extra-large);
+  top: calc(var(--spacing-extra-large) + var(--spacing-large));
   z-index: 0;
   width: calc(100vw - (var(--spacing-large) * 2));
   height: var(--wrapper-height);
