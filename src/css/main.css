@@ -89,12 +89,11 @@
 @import './customs/_bg';
 @import './customs/_typography';
 @import './customs/_variables';
-@import './customs/_nav';
 @import './customs/_telescopic';
 @import './customs/_gallery';
 @import './customs/_core';
 @import './customs/forms';
 
 /* Partials */
-
+@import './partials/nav';
 @import './partials/socials';

@@ -1,9 +1,9 @@
 <nav class="navbar">
 
   <!-- Logo -->
-  <h4><a href="{{ .Site.Home.RelPermalink }}">
+  <h3><a href="{{ .Site.Home.RelPermalink }}">
     {{ .Site.Title }}
-  </a></h4>
+  </a></h3>
 
   <!-- Menu Icon -->
   <div class="nav-icon">
@@ -13,13 +13,27 @@
   </div>
 
   <!-- Primary Nav -->
-	<ul class="">
-		<li><a href="/issue" class="">current issue</a></li>
-    <li><a href="/archive" class="">archive</a></li>
-    <li><a href="/about" class="">about</a></li>
-    <li><a href="/about#contact" class="">contact</a></li>
-    <li><a href="/" class="">FR</a></li>
+	<ul class="nav-menu">
+    {{ $url := .RelPermalink }}
+    {{ range .Site.Menus.main }}
+		<li class="nav-item"><a href="{{ .URL | absLangURL }}" class="{{ if eq $url .URL }}active{{ end }}">{{ .Name }}</a></li>
+    {{ end }}
+    {{ if .Site.IsMultiLingual }}
+      <li class="nav-item">
+        {{ $siteLanguages := .Site.Languages}}
+        {{ $pageLang := .Page.Lang }}
+        {{ range .Page.AllTranslations }}
+          {{ $translation := . }}
+          {{ range $siteLanguages }}
+            {{ if eq $translation.Lang .Lang }}
+              {{ $selected := false }}
+              {{ if ne $pageLang .Lang }}
+              <a href="{{ $translation.RelPermalink}}" class="lang">{{ .Lang }}</a>
+              {{ end }}
+            {{ end }}
+          {{ end}}
+        {{ end }}
+      </li>
+    {{ end }}
 	</ul>
-
-
 </nav>
