@@ -10,13 +10,3 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 # Configure Languages
 # See options here: https://gohugo.io/content-management/multilingual/#configuring-multilingual-mode
 defaultContentLangauge = "en"
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    weight = 1
-
-  [languages.fr]
-    languageName = "Français"
-    languagePrefix = "fr"
-    weight = 2

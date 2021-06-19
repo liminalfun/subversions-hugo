@@ -1,0 +1,20 @@
+[[main]]
+  identifier = "issue"
+  name = "fr current issue"
+  url = "/issue"
+  weight = 1
+[[main]]
+  identifier = "archive"
+  name = "fr archive"
+  url = "/archive"
+  weight = 2
+[[main]]
+  identifier = "about"
+  name = "á propos"
+  url = "/about"
+  weight = 3
+[[main]]
+  identifier = "contact"
+  name = "contactez"
+  url = "/about"
+  weight = 4
