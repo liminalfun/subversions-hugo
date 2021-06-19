@@ -1,0 +1,12 @@
+<div class="socials">
+  {{ with .socials.fb }}
+    <a href="{{ . }}">
+      <img class="fb" src="img/icons/fb.svg" alt="Facebook logo">    
+    </a>
+  {{ end }}
+  {{ with .socials.ig }}
+    <a href="{{ . }}">
+      <img class="ig" src="img/icons/ig.svg" alt="Instagram logo">    
+    </a> 
+  {{ end }}
+</div>

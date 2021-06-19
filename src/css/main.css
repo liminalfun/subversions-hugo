@@ -94,3 +94,7 @@
 @import './customs/_gallery';
 @import './customs/_core';
 @import './customs/forms';
+
+/* Partials */
+
+@import './partials/socials';

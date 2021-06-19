@@ -1,4 +1,7 @@
 <section class="info-text">
   <h1>{{ .title }}</h1>
   <p>{{ .text | markdownify }}</p>
+ 
+    {{ partial "socials" . }}
+
 </section>
