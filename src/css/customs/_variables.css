@@ -39,5 +39,5 @@
 	--border-radius: 1rem;
 	--hover-transition: all 150ms ease;
   --op-50: .5;
-  --wrapper-height: calc(100vh - (var(--spacing-extra-large) * 2)); // Calculate this to responsively subtract navbar 
+  --wrapper-height: calc(100vh - (var(--spacing-large) * 3 )); // Calculate this to responsively subtract navbar 
 }

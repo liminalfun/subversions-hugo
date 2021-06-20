@@ -4,16 +4,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   /* Mobile only */
   flex-direction: column;
   padding: 0 var(--spacing-medium);
-  background-color: var(--color-3);
+  background-color: inherit;
 
 
   @media (--breakpoint-medium) {  
     padding: 0 var(--spacing-extra-large);
     flex-direction: row;
+    height: var(--spacing-extra-large);
   }
 
   a {
@@ -22,7 +23,7 @@
     border-bottom: .5px solid rgba(255,255,255,0);
   }
 
-  a:hover, a:active, .active {
+  a:hover, a:active, a:focus, .active {
     border-bottom: .5px solid rgba(255, 255, 255, 1);
   }
 
@@ -32,7 +33,7 @@
       display: flex;
     }
 
-    .menu-item {
+    .nav-item {
       padding: var(--spacing-medium);
     }
   }
