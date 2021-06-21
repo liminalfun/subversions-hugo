@@ -70,8 +70,25 @@ collections:
     folder: "site/content/submission"
     create: true 
     i18n: true
+    nested:
+      depth: 100
+      summary: "{{title}}"
+
     fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Title of Submission", name: "title", widget: "string", i18n: true}
+      - label: "Type of Submission"
+        name: "type"
+        widget: "select"
+        i18n: duplicate
+        options:
+          - {label: "Image", value: "image"}
+          - {label: "Essay", value: "essay"}
+          - {label: "Poetry", value: "poem"}
+          - {label: "Video", value: "video"}
+      - {label: "Piece", name: "piece", widget: "object", i18n: true, fields: [
+        {label: "Image", name: "image", widget: "image", i18n: duplicate}
+      ]}
+    meta: { path: { widget: string, label: "Path", index_file: "_index", default: {{type}}} }
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"
