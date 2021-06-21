@@ -55,10 +55,13 @@ collections:
     label_singular: "Issue"
     folder: "site/content/issue"
     create: true 
+    slug: "{{date}}"
+    summary: "{{date | date('YYYY')}}: {{title}}"
+    sortable_fields: ['year']
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Year", name: "year", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
+      - {label: "Year", name: "date", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
       - {label: "Description", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
       - {label: "Cover Image", name: "image", widget: "object", hint: "for the archive page", i18n: true, fields: [
         {label: "Image", name: "image", widget: "image", i18n: duplicate, required: false},
@@ -70,25 +73,71 @@ collections:
     folder: "site/content/submission"
     create: true 
     i18n: true
-    nested:
-      depth: 100
-      summary: "{{title}}"
-
+    summary: "{{title}} - {{date}} - {{type}}"
+    sortable_fields: ["title", "date", "type"]
+    view_filters: 
+      - label: "Essay"
+        field: type
+        pattern: 'Essay'
+      - label: "Image"
+        field: type
+        pattern: 'Image'
+      - label: "Poetry"
+        field: type
+        pattern: 'Poetry'
+      - label: "Video"
+        field: type
+        pattern: 'Video'
     fields:
-      - {label: "Title of Submission", name: "title", widget: "string", i18n: true}
-      - label: "Type of Submission"
-        name: "type"
-        widget: "select"
+      - {label: "Title of Submission", name: "title", widget: "string", i18n: duplicate}
+      - {label: "Year / Issue", i18n: duplicate, name: "date", widget: relation, collection: "issue", search_fields: ['date'], value_field: "{{date}}", display_field: "{{date}} - {{title}}"}
+      - label: 'Type of Submission'
+        name: 'type'
+        widget: 'select'
         i18n: duplicate
-        options:
-          - {label: "Image", value: "image"}
-          - {label: "Essay", value: "essay"}
-          - {label: "Poetry", value: "poem"}
-          - {label: "Video", value: "video"}
-      - {label: "Piece", name: "piece", widget: "object", i18n: true, fields: [
-        {label: "Image", name: "image", widget: "image", i18n: duplicate}
-      ]}
-    meta: { path: { widget: string, label: "Path", index_file: "_index", default: {{type}}} }
+        options: ["Image", "Essay", "Poetry", "Video"]
+      - label: 'Artist Info'
+        name: 'artist'
+        widget: object
+        i18n: true
+        fields:
+          - {label: "Name", name: "name", widget: "string", i18n: duplicate, required: false}
+          - {label: "Pronouns", name: "pronouns", widget: "string", i18n: true, required: false}
+          - {label: "Location", name: "location", widget: "string", i18n: duplicate, required: false}
+          - {label: "Bio / Statement", name: "bio", widget: "text", i18n: true, required: false}
+          - {label: "Email address", name: "email", widget: "string", i18n: duplicate, required: false}
+          - {label: "Instagram handle", name: "ig", widget: "string", i18n: duplicate, hint: "Write it without the @ please!", required: false}
+          - {label: "Facebook link", name: "fb", widget: "string", i18n: duplicate, required: false}
+      - label: 'Piece'
+        name: 'piece'
+        label_singular: ""
+        widget: 'list'
+        typeKey: "type"
+        hint: "Remember to add each piece in both French & English! :)"
+        i18n: true
+        types:
+          - label: 'Image'
+            name: 'image'
+            widget: 'object'
+            fields:
+              - {label: "Image", name: "img", widget: "image", i18n: duplicate}
+              - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
+          - label: 'Essay'
+            name: 'essay'
+            widget: 'object'
+            fields: 
+              - {label: "Essay", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
+          - label: 'Poetry'
+            name: 'poetry'
+            widget: 'object'
+            fields: 
+              - {label: "Poem", name: "poem", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
+          - label: 'Video'
+            name: 'video'
+            widget: 'object'
+            fields: 
+              - {label: "Video link", name: "link", widget: "file", i18n: duplicate}
+
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"
