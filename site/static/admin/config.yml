@@ -61,7 +61,7 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Year", name: "date", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
+      - {label: "Year", name: "year", widget: "datetime", default: "", date_format: "YYYY", time_format: false, format: "YYYY", i18n: duplicate}
       - {label: "Description", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
       - {label: "Cover Image", name: "image", widget: "object", hint: "for the archive page", i18n: true, fields: [
         {label: "Image", name: "image", widget: "image", i18n: duplicate, required: false},
@@ -73,6 +73,7 @@ collections:
     folder: "site/content/submission"
     create: true 
     i18n: true
+    slug: "{{date}}-{{title}}"
     summary: "{{title}} - {{date}} - {{genre}}"
     sortable_fields: ["title", "date", "genre"]
     view_filters: 

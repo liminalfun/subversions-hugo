@@ -9,6 +9,6 @@ artist:
     name: ighandle
     link: ig.com
   fb:
-    name: ""
-    link: null
+    ? name
+    ? link
 ---

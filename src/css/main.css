@@ -99,3 +99,8 @@
 @import './partials/socials';
 @import './partials/submission';
 @import './partials/pagination';
+@import './partials/gallery';
+@import './partials/card';
+
+/* Templates */
+@import './templates/issue';

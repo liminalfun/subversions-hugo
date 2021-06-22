@@ -1,7 +1,12 @@
 <section class="info-text">
+  {{ with .date }}
+  <time>{{ . }}</time>
+  {{ end }}
   <h1>{{ .title }}</h1>
-  <p>{{ .text | markdownify }}</p>
+  <div>{{ .text | markdownify }}</div>
+  
+  <p class="b">scroll →</p>
  
-    {{ partial "socials" . }}
+  {{ partial "socials" . }}
 
 </section>

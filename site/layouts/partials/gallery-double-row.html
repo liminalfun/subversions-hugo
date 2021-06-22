@@ -1,0 +1,9 @@
+<section class="gallery gallery-double-row scroll">
+
+    {{ $totalSubmissions := where .Site.Pages "Type" "submission" }}
+    
+      {{ range $totalSubmissions }}
+        {{ .Render "card-submission" }}
+      {{ end }}
+
+</section>

@@ -1,0 +1,27 @@
+.scroll {
+  /* Scroll behaviour */
+  overflow-x: scroll;
+
+  /* Scroll bar */
+  scrollbar-width: none;
+}
+
+.gallery {
+  height: var(--wrapper-height);
+  display: grid;
+  grid-auto-flow: column;
+  margin-left: 40px;
+  gap: var(--spacing-large);
+  align-items: center;
+
+  &-single-row {
+    grid-template-rows: 1fr;
+  }
+
+  &-double-row {
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+
+  }
+
+}
+
