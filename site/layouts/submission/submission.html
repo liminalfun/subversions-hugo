@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ with .Params }}
+<section>
+  <div>
+    {{ with .piece }}
+      {{ .poem | markdownify }}
+    {{ end }}
+  </div>
+  <div>
+    {{ .title }}
+    {{ .genre }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,45 @@
+/* Components ------------------------------------------------------------- */
+
+html {
+
+
+}
+
+.wrapper {
+  padding: var(--spacing-large);
+  padding-right: 0;
+  height: var(--wrapper-height);
+  overflow-y: scroll;
+  /* Scroll bar */
+  scrollbar-width: none;
+
+  @media (--breakpoint-large) {
+    padding: var(--spacing-extra-large);
+  }
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-large);
+  align-items: center;
+
+  @media (--breakpoint-large) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.hide-lg {
+  text-align: center;
+  margin-bottom: var(--spacing-small);
+@media (--breakpoint-large) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  display: none;
+  @media (--breakpoint-large) {
+    display: block;
+  }
+}

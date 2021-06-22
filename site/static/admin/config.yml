@@ -40,6 +40,9 @@ collections:
     label_singular: "Issue"
     folder: "site/content/issue"
     create: true 
+    slug: "{{date}}"
+    summary: "{{date | date('YYYY')}}: {{title}}"
+    sortable_fields: ['year']
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
@@ -49,8 +52,79 @@ collections:
     folder: "site/content/submission"
     create: true 
     i18n: true
+    slug: "{{date}}-{{title}}"
+    summary: "{{title}} - {{date}} - {{genre}}"
+    sortable_fields: ["title", "date", "genre"]
+    view_filters: 
+      - label: "Essay"
+        field: genre
+        pattern: 'Essay'
+      - label: "Image"
+        field: genre
+        pattern: 'Image'
+      - label: "Poetry"
+        field: genre
+        pattern: 'Poetry'
+      - label: "Video"
+        field: genre
+        pattern: 'Video'
     fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Title of Submission", name: "title", widget: "string", i18n: duplicate}
+      - {label: "Year / Issue", i18n: duplicate, name: "date", widget: relation, collection: "issue", search_fields: ['date'], value_field: "{{date}}", display_field: "{{date}} - {{title}}"}
+      - label: 'Type of Submission'
+        name: 'genre'
+        widget: 'select'
+        i18n: duplicate
+        options: ["Image", "Essay", "Poetry", "Video"]
+      - label: 'Artist Info'
+        name: 'artist'
+        widget: object
+        i18n: true
+        fields:
+          - {label: "Name", name: "name", widget: "string", i18n: duplicate, required: false}
+          - {label: "Pronouns", name: "pronouns", widget: "string", i18n: true, required: false}
+          - {label: "Location", name: "location", widget: "string", i18n: duplicate, required: false}
+          - {label: "Bio / Statement", name: "bio", widget: "text", i18n: true, required: false}
+          - {label: "Email address", name: "email", widget: "string", i18n: duplicate, required: false}
+          - {label: "Instagram", name: "ig", widget: "object", i18n: true, required: false, collapsed: true, fields: [
+            {label: "Instagram handle", name: "name", widget: "string", i18n: duplicate, hint: "Write it without the @ please!", required: false},
+            {label: "Instagram link", name: "link", widget: "string", i18n: duplicate, required: false}
+          ]}
+          - {label: "Facebook", name: "fb", widget: "object", i18n: true, required: false, collapsed: true, fields: [
+            {label: "Facebook name", name: "name", widget: "string", i18n: duplicate, required: false},
+            {label: "Facebook link", name: "link", widget: "string", i18n: duplicate, required: false}
+          ]}
+      - label: 'Piece'
+        name: 'piece'
+        label_singular: ""
+        widget: 'list'
+        typeKey: "genre"
+        hint: "Remember to add each piece in both French & English! :)"
+        i18n: true
+        types:
+          - label: 'Image'
+            name: 'image'
+            widget: 'object'
+            typeKey: "genre"
+            fields:
+              - {label: "Image", name: "img", widget: "image", i18n: duplicate}
+              - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
+          - label: 'Essay'
+            name: 'essay'
+            widget: 'object'
+            fields: 
+              - {label: "Essay", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
+          - label: 'Poetry'
+            name: 'poetry'
+            widget: 'object'
+            fields: 
+              - {label: "Poem", name: "poem", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
+          - label: 'Video'
+            name: 'video'
+            widget: 'object'
+            fields: 
+              - {label: "Video link", name: "link", widget: "file", i18n: duplicate}
+
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"
@@ -68,8 +142,27 @@ collections:
       - {label: "Title", name: "title", widget: "string", i18n: true}
   - name: "settings"
     label: "Site Settings"
-    folder: "site/content/settings"
-    create: true 
-    i18n: true
-    fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
+    files:
+      - label: "Menu in English"
+        name: "menus.en"
+        file: "site/config/_default/menus.en.toml"
+        fields: 
+          - label: Menu Items
+            name: main
+            widget: list
+            allow_add: false
+            summary: "{{name}} - {{weight}}"
+            fields:
+              - {label: Page Name, name: name, widget: string}
+              - {label: Order in list, name: weight, widget: number}
+      - label: "Menu in French"
+        name: "menus.fr"
+        file: "site/config/_default/menus.fr.toml"
+        fields: 
+          - label: Menu Items
+            name: main
+            widget: list
+            max: 4
+            fields:
+              - {label: Page Name, name: name, widget: string}
+              - {label: Order in list, name: weight, widget: number}

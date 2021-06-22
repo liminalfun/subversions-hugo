@@ -1,0 +1,6 @@
+.issue-text {
+  .scroll {
+    margin-top: var(--spacing-large);
+    font-weight: bold;
+  }
+}

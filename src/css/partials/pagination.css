@@ -1,0 +1,11 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-medium) 0;
+
+  @media (--breakpoint-large) {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - var(--spacing-extra-large) * 2)
+  }
+}

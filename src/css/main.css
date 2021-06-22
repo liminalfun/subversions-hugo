@@ -85,3 +85,23 @@
 
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
+
+/* Custom Styles */
+@import './customs/_bg';
+@import './customs/_typography';
+@import './customs/_variables';
+@import './customs/_telescopic';
+@import './customs/_gallery';
+@import './customs/_core';
+@import './customs/forms';
+
+/* Partials */
+@import './partials/nav';
+@import './partials/socials';
+@import './partials/submission';
+@import './partials/pagination';
+@import './partials/gallery';
+@import './partials/card';
+
+/* Templates */
+@import './templates/issue';

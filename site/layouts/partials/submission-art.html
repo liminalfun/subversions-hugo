@@ -1,0 +1,22 @@
+<div class="art {{ if or (eq .genre "Poetry") (eq .genre "Essay")}}bg-texture{{ end }}">
+  {{ range .piece }}
+    {{ if eq .genre "poetry" }}
+      <div class="poem">
+        {{ .poem | markdownify }}
+      </div>
+    {{ end }}
+    {{ if eq .genre "essay" }}
+      <div class="essay">
+      {{ .essay | markdownify }}
+      </div>
+    {{ end }}
+    {{ if eq .genre "image" }}
+      <img src="{{ .img }}" alt="{{ .alt }}">
+    {{ end }}
+    {{ if eq .genre "video" }}
+      <div> 
+        {{ .link | markdownify }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>

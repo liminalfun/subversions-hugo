@@ -1,0 +1,14 @@
+<a href="{{ .RelPermalink }}" title="{{ .Title }}" alt="{{ .Title }}">
+  <article class="card card-submission {{ if or (eq .Params.genre "Essay") (eq .Params.genre "Poetry") }}bg-texture{{end}}">
+    {{range .Params.piece}}
+      {{ if .img }}
+      <img src="{{ .img }}" alt="{{ .alt }}">
+      {{ end }}
+    {{ end }}
+    <div class="label">
+      <h4>{{ .Title }}</h4>
+      <p>{{ .Params.artist.name }}</p>
+      <p class="genre">**{{ .Params.genre }}**</p>
+    </div>
+  </article>
+</a>

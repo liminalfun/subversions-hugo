@@ -1,0 +1,79 @@
+.submission {
+  background-color: var(--light-gray);
+  color: var(--black);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large) var(--spacing-medium) var(--spacing-large);
+  
+  @media (--breakpoint-large) {
+    display: flex;
+    padding: var(--spacing-large) var(--spacing-extra-large) var(--spacing-extra-large);
+  }
+
+}
+
+.art, .info {
+  width: 100%;
+  @media (--breakpoint-large) {
+    width: 50%;
+  }
+}
+
+.art {
+  position: static;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+
+  .bg-texture {
+    position: relative;
+    width: 100%;
+  }
+
+  .poem, .essay {
+    padding: var(--spacing-large) var(--spacing-medium);
+    @media (--breakpoint-large) {
+      padding: var(--spacing-extra-large) var(--spacing-large);
+    }
+  }
+
+  img {
+    height: 95%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.info {
+display: flex;
+flex-direction: column;
+margin-top: var(--spacing-medium);
+  
+  @media (--breakpoint-large) {
+    margin-top: 0;
+    padding-left: var(--spacing-extra-large);
+  }
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    
+   img {
+    padding-right: var(--spacing-small);
+    }
+  }
+}
+
+.artist-bio {
+  padding-top: var(--spacing-medium);
+}
+
+.artist-socials {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

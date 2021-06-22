@@ -1,19 +1,36 @@
 <nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
 
-	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
-	</a>
+  <!-- Logo -->
+  <h3><a href="{{ .Site.Home.RelPermalink }}">
+    {{ .Site.Title }}
+  </a></h3>
 
 	<!-- Primary Nav -->
 	<ul class="flex b grey-3">
 		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
 
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
+  <!-- Primary Nav -->
+	<ul class="nav-menu">
+    {{ $url := .RelPermalink }}
+    {{ range .Site.Menus.main }}
+		<li class="nav-item"><a href="{{ .URL | absLangURL }}" class="{{ if eq $url .URL }}active{{ end }}">{{ .Name }}</a></li>
+    {{ end }}
+    {{ if .Site.IsMultiLingual }}
+      <li class="nav-item">
+        {{ $siteLanguages := .Site.Languages}}
+        {{ $pageLang := .Page.Lang }}
+        {{ range .Page.AllTranslations }}
+          {{ $translation := . }}
+          {{ range $siteLanguages }}
+            {{ if eq $translation.Lang .Lang }}
+              {{ $selected := false }}
+              {{ if ne $pageLang .Lang }}
+              <a href="{{ $translation.RelPermalink}}" class="lang">{{ .Lang }}</a>
+              {{ end }}
+            {{ end }}
+          {{ end}}
+        {{ end }}
+      </li>
+    {{ end }}
 	</ul>
-
 </nav>

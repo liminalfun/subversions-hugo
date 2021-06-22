@@ -4,7 +4,7 @@
   <body class="sans-serif">
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
-
+    <div class="bg-texture {{ if eq .Type "submission"}}shadow-teal{{end}}"/>
     {{ block "main" . }}{{ end }}
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
