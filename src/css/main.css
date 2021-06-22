@@ -77,6 +77,7 @@
 /* Importing here will allow you to override any variables in the modules */
 @import './imports/_colors';
 @import './imports/_media-queries';
+@import './imports/_variables';
 
 /* Debugging */
 @import './imports/_debug-children';
