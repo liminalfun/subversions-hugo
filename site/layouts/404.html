@@ -1,6 +1,11 @@
 {{ define "main" }}
-
-<h1>Nothing Here...</h1>
-<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
+<main class="page-404">
+  <h1 class="big">404</h1>
+  <h1>Oops! Page not found.</h1>
+  <a href="{{ "/" | relLangURL }}" class="btn">
+    <span>Home Please</span>
+    <img src="img/icons/chevron-right.svg" alt="arrow right">
+  </a>
+</main>
 
 {{ end }}
