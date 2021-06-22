@@ -1,0 +1,49 @@
+<div class="info">
+  <h1 class="hide-sm">{{.title}}</h1>
+  <div class="artist-bio">
+    {{ if .artist.name }}
+      <div class="item">
+        <img src="img/icons/name.svg" alt="">
+        <p>{{ .artist.name }} {{ with .artist.pronouns }}{{ . }}{{ end }}</p>
+      </div>
+    {{ end }}
+    {{ with .artist.location }}
+      <div class="item">
+        <img src="img/icons/location.svg" alt="">
+        <p>{{ . }}</p>
+      </div>
+    {{ end }}
+    {{ with .artist.bio }}
+      <div class="item">
+        <img src="img/icons/bio.svg" alt="">
+        <p>{{ . }}</p>
+      </div>
+    {{ end }}
+  </div>
+  <div class="artist-socials">
+    {{ with .artist.email }}
+      <div class="item">
+        <img src="img/icons/email.svg" alt="">
+        <a href="mailto:{{ . }}" target="_blank" rel="noopener">
+          <p>{{ . }}</p>
+        </a>
+      </div>
+    {{ end }}
+    {{ with .artist.ig }}
+      <div class="item">
+        <img src="img/icons/ig-dark.svg" alt="">
+        <a href="{{ .link }}" target="_blank" rel="noopener">
+          <p>@{{ .name }}</p>
+        </a>
+      </div>
+    {{ end }}
+    {{ with .artist.fb }}
+      <div class="item">
+        <img src="img/icons/fb-dark.svg" alt="">
+        <a href="{{ .link }}" target="_blank" rel="noopener">
+          <p>{{ .name }}</p>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>

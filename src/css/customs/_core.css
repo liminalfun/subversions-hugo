@@ -29,6 +29,17 @@ html {
   }
 }
 
-.info-text {
-  
+.hide-lg {
+  text-align: center;
+  margin-bottom: var(--spacing-small);
+@media (--breakpoint-large) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  display: none;
+  @media (--breakpoint-large) {
+    display: block;
+  }
 }

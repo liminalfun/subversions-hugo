@@ -1,11 +1,15 @@
 ---
 title: Poem Test
 date: "2021"
-type: Poetry
+genre: Poetry
 artist:
   name: Lorem Ipsum
-  location: "TIohtia:ke "
+  location: "Tiohtia:ke "
   email: lorem@ipsum.com
-  ig: ighandle
-  fb: https://facebook.com
+  ig:
+    name: ighandle
+    link: https://ig.com
+  fb:
+    name: facebook name
+    link: https://fb.com
 ---

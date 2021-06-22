@@ -35,3 +35,7 @@ html, body {
   width: calc(100vw - (var(--spacing-large) * 2));
   height: var(--wrapper-height);
 }
+
+.shadow-teal {
+  box-shadow: -10px 10px 0px 0px var(--shadow-teal);
+}

@@ -1,10 +1,14 @@
 ---
 date: "2021"
-type: Image
+genre: Image
 artist:
   name: Lorem Ipsum
-  location: "Tiohtia:ke "
+  location: "TIohtia:ke "
   email: lorem@ipsum.com
-  ig: ighandle
-  fb: https://facebook.com
+  ig:
+    name: ighandle
+    link: ig.com
+  fb:
+    name: ""
+    link: null
 ---

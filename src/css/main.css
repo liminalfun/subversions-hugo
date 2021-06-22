@@ -97,3 +97,5 @@
 /* Partials */
 @import './partials/nav';
 @import './partials/socials';
+@import './partials/submission';
+@import './partials/pagination';
