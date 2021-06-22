@@ -106,8 +106,14 @@ collections:
           - {label: "Location", name: "location", widget: "string", i18n: duplicate, required: false}
           - {label: "Bio / Statement", name: "bio", widget: "text", i18n: true, required: false}
           - {label: "Email address", name: "email", widget: "string", i18n: duplicate, required: false}
-          - {label: "Instagram handle", name: "ig", widget: "string", i18n: duplicate, hint: "Write it without the @ please!", required: false}
-          - {label: "Facebook link", name: "fb", widget: "string", i18n: duplicate, required: false}
+          - {label: "Instagram", name: "ig", widget: "object", i18n: true, required: false, fields: [
+            {label: "Instagram handle", name: "name", widget: "string", i18n: duplicate, hint: "Write it without the @ please!", required: false},
+            {label: "Instagram link", name: "link", widget: "string", i18n: duplicate, required: false}
+          ]}
+          - {label: "Facebook", name: "fb", widget: "object", i18n: true, required: false, fields: [
+            {label: "Facebook name", name: "name", widget: "string", i18n: duplicate, required: false},
+            {label: "Facebook link", name: "link", widget: "string", i18n: duplicate, required: false}
+          ]}
       - label: 'Piece'
         name: 'piece'
         label_singular: ""
