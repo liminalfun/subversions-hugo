@@ -1,0 +1,29 @@
+.telescopic {
+  color: white;
+  padding: var(--spacing-medium);
+}
+
+.a {
+
+}
+
+.b {
+
+}
+
+.c {
+
+}
+
+.reveal {
+  padding: 0 var(--spacing-small);
+  background: var(--gray);
+}
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
