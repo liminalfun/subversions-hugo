@@ -1,7 +1,7 @@
 [[main]]
   identifier = "issue"
   name = "fr current issue"
-  url = "/issue/issue/2021"
+  url = "/issue/2021"
   weight = 1
 [[main]]
   identifier = "archive"
