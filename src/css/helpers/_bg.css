@@ -1,13 +1,17 @@
 /* Animated Background Gradient ---------------------------------------------- */
 
-html, body {
+.gradient {
   background-image: var(--gradient);
-  background-size: 600%;
+  background-size: 900%;
   background-position: 0 0;
   /* Animation */
-  animation-duration: 300s;
+  animation-duration: 80s;
   animation-iteration-count: infinite;
   animation-name: gradients;
+
+  &.purple {
+    background-image: var(--gradient-purple);
+  }
 }
 
 @keyframes gradients {
