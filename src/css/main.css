@@ -85,14 +85,16 @@
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
 
-/* Custom Styles */
-@import './customs/_bg';
-@import './customs/_typography';
-@import './customs/_variables';
-@import './customs/_telescopic';
-@import './customs/_gallery';
-@import './customs/_core';
-@import './customs/forms';
+/* Helpers */
+@import './helpers/_variables';
+@import './helpers/_bg';
+@import './helpers/_typography';
+@import './helpers/_core';
+
+/* Components */
+
+@import './components/_telescopic';
+@import './components/forms';
 
 /* Partials */
 @import './partials/nav';
@@ -102,6 +104,6 @@
 @import './partials/gallery';
 @import './partials/card';
 
-/* Templates */
-@import './templates/issue';
-@import './templates/404';
+/* Pages */
+@import './pages/issue';
+@import './pages/404';

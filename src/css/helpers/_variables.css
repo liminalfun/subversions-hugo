@@ -10,12 +10,15 @@
   --color-4: rgba(20, 69, 82, 1);
   --color-5: rgba(27, 58, 75, 1);
   --color-6: rgba(33, 47, 69, 1);
-  --color-7: rgba(39, 38, 64, 1);
-  --color-8: rgba(49, 34, 68, 1);
-  --color-9: rgba(62, 31, 71, 1);
-  --color-10: rgba(77, 25, 77, 1); 
+  --color-7: rgba(39, 38, 64, 1);   // space cadet
+  --color-8: rgba(49, 34, 68, 1);   // dark purple
+  --color-9: rgba(62, 31, 71, 1);   // russian violet, darker
+  --color-10: rgba(77, 25, 77, 1);  // russian violet, brighter
+  --color-11: rgba(93, 46, 93);     // palatinate purple
+  --color-12: rgba(108, 65, 108);   // english violet
   --shadow-teal: rgba(0, 120, 122, 1);
   --gradient: linear-gradient(to right, var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6), var(--color-7), var(--color-8), var(--color-9), var(--color-10));
+  --gradient-purple: linear-gradient(to right, var(--color-7), var(--color-8), var(--color-9), var(--color-10), var(--color-11), var(--color-12), var(--color-11), var(--color-10), var(--color-9), var(--color-8));
 
 	/* Typography */
 	--font-family: Poppins, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
