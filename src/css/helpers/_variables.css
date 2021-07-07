@@ -4,21 +4,25 @@
   --light-gray: rgba(242, 242, 242, 1);
   --gray: rgba(121, 121, 121, 1);
   --black: rgba(43, 37, 35, 1);
-  --color-1: rgba(0, 100, 102, 1);
-  --color-2: rgba(6, 90, 96, 1);
-  --color-3: rgba(11, 82, 91, 1);
-  --color-4: rgba(20, 69, 82, 1);
-  --color-5: rgba(27, 58, 75, 1);
-  --color-6: rgba(33, 47, 69, 1);
-  --color-7: rgba(39, 38, 64, 1);   // space cadet
-  --color-8: rgba(49, 34, 68, 1);   // dark purple
-  --color-9: rgba(62, 31, 71, 1);   // russian violet, darker
-  --color-10: rgba(77, 25, 77, 1);  // russian violet, brighter
-  --color-11: rgba(93, 46, 93);     // palatinate purple
-  --color-12: rgba(108, 65, 108);   // english violet
+  --color-1: rgba(0, 100, 102, 1);      // teal lightest
+  --color-2: rgba(6, 90, 96, 1);        // teal light
+  --color-3: rgba(11, 82, 91, 1);       // teal mid
+  --color-4: rgba(20, 69, 82, 1);       // teal darker
+  --color-5: rgba(27, 58, 75, 1);       // blue
+  --color-6: rgba(33, 47, 69, 1);       // 
+  --color-7: rgba(39, 38, 64, 1);       // blue purple
+  --color-8: rgba(49, 34, 68, 1);       // dark purple
+  --color-9: rgba(62, 31, 71, 1);       // russian violet, darker
+  --color-10: rgba(77, 25, 77, 1);      // russian violet, brighter
+  --color-11: rgba(93, 46, 93, 1);      // palatinate purple
+  --color-12: rgba(108, 65, 108, 1);    // english violet
+  --color-13: rgba(16, 76, 87, 1);      // teal mid
+  --color-14: rgba(18, 73, 85, 1);      // teal mid
+  --color-15: rgba(23, 66, 80, 1);      // teal darker
   --shadow-teal: rgba(0, 120, 122, 1);
   --gradient: linear-gradient(to right, var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-5), var(--color-6), var(--color-7), var(--color-8), var(--color-9), var(--color-10));
   --gradient-purple: linear-gradient(to right, var(--color-7), var(--color-8), var(--color-9), var(--color-10), var(--color-11), var(--color-12), var(--color-11), var(--color-10), var(--color-9), var(--color-8));
+  --gradient-blue: linear-gradient(to right, var(--color-1), var(--color-2), var(--color-3), var(--color-13), var(--color-14), var(--color-15), var(--color-5), var(--color-15), var(--color-14), var(--color-13), var(--color-3), var(--color-2));
 
 	/* Typography */
 	--font-family: Poppins, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;

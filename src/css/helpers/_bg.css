@@ -12,6 +12,10 @@
   &.purple {
     background-image: var(--gradient-purple);
   }
+  
+  &.blue {
+    background-image: var(--gradient-blue);
+  }
 }
 
 @keyframes gradients {

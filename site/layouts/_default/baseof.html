@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}" class="gradient purple">
+<html lang="{{ $.Site.Language.Lang }}" class="gradient purple {{ if (eq .Type "issue" "submission") }} blue {{ end }}">
   {{ partial "head" . }}
   <body class="sans-serif">
 
