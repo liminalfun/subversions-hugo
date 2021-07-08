@@ -1,6 +1,18 @@
 .issue-text {
+  padding: var(--spacing-large);
+  text-align: center;
+  max-height: var(--wrapper-height);
+  min-width: 400px;
+  overflow-y: scroll;
+
   .scroll {
     margin-top: var(--spacing-large);
     font-weight: bold;
+  }
+
+  @media (--breakpoint-medium) {
+    text-align: left;
+    padding: var(--spacing-extra-large);
+    padding-right: 0;
   }
 }

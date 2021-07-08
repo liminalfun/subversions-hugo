@@ -6,15 +6,15 @@ html {
 }
 
 .wrapper {
-  padding: var(--spacing-large);
-  padding-right: 0;
+  /* padding: var(--spacing-large);
+  padding-right: 0; */
   height: var(--wrapper-height);
   overflow-y: scroll;
   /* Scroll bar */
   scrollbar-width: none;
 
   @media (--breakpoint-large) {
-    padding: var(--spacing-extra-large);
+    /* padding: var(--spacing-extra-large); */
   }
 }
 

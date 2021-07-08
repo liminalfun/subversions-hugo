@@ -27,12 +27,21 @@
 	/* Typography */
 	--font-family: Poppins, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 	--font-family-dyslexic: OpenDyslexic, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  --body-font-weight: 400;
+	--bold-font-weight: 700;
   --line-height: 1.5;
 
+  /* Font Size */
 	--font-size: 14px;
-
-	--body-font-weight: 400;
-	--bold-font-weight: 700;
+  --h1-size: 24px;
+  --h2-size: 20px;
+  --h3-size: 18px;
+  --h4-size: 16px;
+  @media(--breakpoint-medium) {
+    --font-size: 14px;
+    --h1-size: 33px;
+    --h2-size: 30px;
+  }
 
 	/* Sizing */
 	--spacing-none: 0;
@@ -44,7 +53,7 @@
 	--spacing-extra-extra-large: 8rem;
 	--spacing-extra-extra-extra-large: 16rem;
 
-	/* Miscelaneous */
+	/* Miscellaneous */
 	--border-radius: 1rem;
 	--hover-transition: all 150ms ease;
   --op-50: .5;

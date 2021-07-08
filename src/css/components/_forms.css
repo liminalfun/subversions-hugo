@@ -38,7 +38,7 @@ button {
   padding: var(--spacing-medium);
   border-radius: var(--border-radius);
   font-family: var(--font-family-dyslexic);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size);
   transition: var(--hover-transition);
 
   &:hover {

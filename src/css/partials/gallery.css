@@ -1,6 +1,7 @@
 .scroll {
   /* Scroll behaviour */
   overflow-x: scroll;
+  overflow-y: hidden;
 
   /* Scroll bar */
   scrollbar-width: none;
@@ -8,11 +9,18 @@
 
 .gallery {
   height: var(--wrapper-height);
+  max-height: var(--wrapper-height);
   display: grid;
   grid-auto-flow: column;
-  margin-left: 40px;
+  padding: var(--spacing-large);
+  padding-right: 0;
   gap: var(--spacing-large);
   align-items: center;
+
+  @media (--breakpoint-medium) {
+    padding: var(--spacing-extra-large) 0;
+    padding-right: 0;
+  }
 
   &-single-row {
     grid-template-rows: 1fr;
