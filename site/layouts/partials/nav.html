@@ -14,9 +14,14 @@
 
   <!-- Primary Nav -->
 	<ul class="nav-menu">
+    {{ $currentPage := . }}
     {{ $url := .RelPermalink }}
     {{ range .Site.Menus.main }}
-		<li class="nav-item"><a href="{{ .URL | absLangURL }}" class="{{ if eq $url .URL }}active{{ end }}">{{ .Name }}</a></li>
+		<li class="nav-item">
+      <a  href="{{ .URL | absLangURL }}" class="nav-link">
+        {{ .Name }}
+      </a>
+    </li>
     {{ end }}
     {{ if .Site.IsMultiLingual }}
       <li class="nav-item">
