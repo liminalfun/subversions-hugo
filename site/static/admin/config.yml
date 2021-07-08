@@ -3,6 +3,13 @@ backend:
   repo: liminalfun/subversions-hugo
   branch: master
 
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 59f7efd702ceb358833a
+  settings:
+    autoFilename: true
+
 local_backend: true
 
 media_folder: "site/content/resources" # Folder where user uploaded files should go
