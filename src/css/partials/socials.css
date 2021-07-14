@@ -1,22 +1,24 @@
 .socials {
-  a {
-    padding: var(--spacing-small);
-    margin: var(--spacing-small) 0 var(--spacing-small);
-    transition: var(--hover-transition);
-    border-radius: var(--border-radius);
-    img {
-      vertical-align: middle;
-      margin: auto;
-    }
-    .fb {
-      padding-left: 4px;
-    }
-    .ig {
-      margin-top: 2px;
-      padding-bottom: 2px;
-    }
-    &:hover, &:active {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
+	margin-top: var(--spacing-medium);
+	a {
+		padding: var(--spacing-small);
+		margin: var(--spacing-small) 0 var(--spacing-small);
+		transition: var(--hover-transition);
+		border-radius: var(--border-radius);
+		img {
+			vertical-align: middle;
+			margin: auto;
+		}
+		.fb {
+			padding-left: 4px;
+		}
+		.ig {
+			margin-top: 2px;
+			padding-bottom: 2px;
+		}
+		&:hover,
+		&:active {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
 }

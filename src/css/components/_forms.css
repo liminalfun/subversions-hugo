@@ -1,48 +1,53 @@
 .contact {
-  align-self: start;
-  max-width: 100%;
+	padding: var(--spacing-large);
+	align-self: start;
+	max-width: 100%;
+
+	@media (--breakpoint-medium) {
+		padding: var(--spacing-extra-large);
+	}
 }
 
 form {
-  max-width: 100%;
+	max-width: 100%;
 }
 
-input, textarea {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 2px solid var(--color-7);
-  padding-left: calc(var(--spacing-large) + 16px);
-  width: 100%;
+input,
+textarea {
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 2px solid var(--color-7);
+	padding-left: calc(var(--spacing-large) + 16px);
+	width: 100%;
 
-  &:focus + label {
-    transform: translateY(-50%);
-    background: var(--color-7);
-  }
-  
+	&:focus + label {
+		transform: translateY(-50%);
+		background: var(--color-7);
+	}
 }
 
 fieldset {
-  margin: var(--spacing-medium) 0 ;
+	margin: var(--spacing-medium) 0;
 
-  img {
-    position: absolute;
-    top: 0.9rem;
-    left: var(--spacing-medium);
-    z-index: 2;
-  }
+	img {
+		position: absolute;
+		top: 0.9rem;
+		left: var(--spacing-medium);
+		z-index: 2;
+	}
 }
 
 button {
-  background: var(--color-7);
-  color: white;
-  width: 100%;
-  padding: var(--spacing-medium);
-  border-radius: var(--border-radius);
-  font-family: var(--font-family-dyslexic);
-  font-size: var(--font-size);
-  transition: var(--hover-transition);
+	background: var(--color-7);
+	color: white;
+	width: 100%;
+	padding: var(--spacing-medium);
+	border-radius: var(--border-radius);
+	font-family: var(--font-family-dyslexic);
+	font-size: var(--font-size);
+	transition: var(--hover-transition);
 
-  &:hover {
-    background: var(--color-10);
-    box-shadow: 4px 4px 0px var(--color-7);
-  }
+	&:hover {
+		background: var(--color-10);
+		box-shadow: 4px 4px 0px var(--color-7);
+	}
 }

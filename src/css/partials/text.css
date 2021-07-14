@@ -3,8 +3,6 @@
 	padding: var(--spacing-large);
 	padding-bottom: 0;
 	text-align: center;
-	max-height: var(--wrapper-height);
-	overflow-y: scroll;
 
 	.scroll-hint {
 		margin-top: var(--spacing-large);
@@ -24,5 +22,11 @@
 		padding: var(--spacing-extra-large);
 		padding-right: 0;
 		min-width: 400px;
+		max-height: var(--wrapper-height);
+		overflow-y: scroll;
 	}
+}
+
+.info-text {
+	align-self: start;
 }
