@@ -1,0 +1,5 @@
+<section class="gallery gallery-single-row scroll">
+	{{ range after 2 (where .Site.Pages "Type" "issue") }} {{ partial
+	"card-issue" .Params }} {{ end }} {{ range after 1 (where .Site.Pages "Type"
+	"pdf-issues") }} {{ partial "card-issue" .Params}} {{ end }}
+</section>

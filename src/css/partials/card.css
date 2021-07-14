@@ -1,35 +1,48 @@
 .card {
-  width: max-content;
-  display: flex;
-  flex-direction: column;
-  z-index: 1; 
-  .label {
-    padding: var(--spacing-small);
-  }
-  &-submission {
-    width: 250px;
-    height: auto;
-    background-color: inherit;
-    color: var(--white);
-    border-radius: var(--border-radius);
-    border: 2px transparent solid;
-    .genre {
-      text-transform: lowercase;
-      font-family: var(--font-family-dyslexic);
-    }
-    img {
-      border-radius: var(--border-radius);
-      border: 2px transparent solid;
-    }
-  }
-  &.bg-texture {
-    position: static;
-    color: var(--black);
-  }
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	width: 50vw;
+	height: auto;
+	background-color: inherit;
+	color: var(--white);
+	border-radius: var(--border-radius);
+	border: 2px transparent solid;
 
+	&-submission {
+		max-height: 50%;
+	}
+	.genre {
+		text-transform: lowercase;
+		font-family: var(--font-family-dyslexic);
+	}
+	img {
+		border-radius: var(--border-radius);
+		border: 2px transparent solid;
+	}
+	.label {
+		padding: var(--spacing-small);
+		time {
+			display: inline-block;
+		}
+	}
+
+	&.bg-texture {
+		position: static;
+		color: var(--black);
+	}
+	@media (--breakpoint-not-small) {
+		width: 250px;
+		height: auto;
+	}
+	@media (--breakpoint-large) {
+	}
 }
 
-a:hover .card-submission img, a:active .card-submission img, a:hover .bg-texture, a:active .bg-texture {
-  box-shadow: 0px 4px 0px 0px var(--color-5);
-  border: 2px var(--color-5) solid;
+a:hover .card img,
+a:active .card img,
+a:hover .bg-texture,
+a:active .bg-texture {
+	box-shadow: 0px 4px 0px 0px var(--color-5);
+	border: 2px var(--color-5) solid;
 }

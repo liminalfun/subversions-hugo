@@ -103,6 +103,7 @@
 @import './partials/pagination';
 @import './partials/gallery';
 @import './partials/card';
+@import './partials/text';
 
 /* Pages */
 @import './pages/issue';
