@@ -10,7 +10,7 @@
 	border: 2px transparent solid;
 
 	&-submission {
-		max-height: 50%;
+		max-height: 50vh;
 	}
 	.genre {
 		text-transform: lowercase;
@@ -19,6 +19,9 @@
 	img {
 		border-radius: var(--border-radius);
 		border: 2px transparent solid;
+		object-fit: contain;
+		height: 100%;
+		align-self: start;
 	}
 	.label {
 		padding: var(--spacing-small);
@@ -31,8 +34,12 @@
 		position: static;
 		color: var(--black);
 	}
+	&.max-img {
+		width: max-content !important;
+	}
 	@media (--breakpoint-not-small) {
-		width: 250px;
+		width: auto;
+		max-width: calc(100vw / 2.4);
 		height: auto;
 	}
 	@media (--breakpoint-large) {

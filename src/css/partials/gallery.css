@@ -8,6 +8,7 @@
 }
 
 .gallery {
+	height: var(--wrapper-height);
 	max-height: var(--wrapper-height);
 	display: grid;
 	grid-auto-flow: column;
