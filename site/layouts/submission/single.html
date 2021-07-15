@@ -5,21 +5,7 @@
 	{{ partial "submission-art" .Params }} 
 	{{ partial "submission-info" .Params}} 
 
-
-	<nav class="pagination">
-		<a href="/">
-			<img src="img/icons/arrow-left.svg" alt="Left arrow" />
-		</a>
-		<a href="/">
-			<img src="img/icons/close.svg" alt="Close symbol" />
-		</a>
-		<a href="/">
-			<img src="img/icons/arrow-right.svg" alt="Right arrow" />
-		</a>
-	</nav>
+	{{ partial "pagination" . }}
 </section>
-
-
-{{ partial "pagination" .Params }}
 
 {{ end }}

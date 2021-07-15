@@ -9,3 +9,8 @@
     width: calc(100% - var(--spacing-extra-large) * 2)
   }
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: .5;
+}
