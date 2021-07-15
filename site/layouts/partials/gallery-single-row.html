@@ -1,6 +1,6 @@
 <section class="gallery gallery-single-row scroll">
-	<div class="scroll-left"></div>
-	<div class="scroll-right"></div>
+	<!-- <div class="scroll-left"></div>
+	<div class="scroll-right"></div> -->
 	{{ range after 2 (where .Site.Pages "Type" "issue") }} {{ partial
 	"card-issue" .Params }} {{ end }} {{ range after 1 (where .Site.Pages "Type"
 	"pdf-issues") }} {{ partial "card-issue" .Params}} {{ end }}

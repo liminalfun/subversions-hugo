@@ -8,7 +8,6 @@
 }
 
 .gallery {
-	height: var(--wrapper-height);
 	max-height: var(--wrapper-height);
 	display: grid;
 	grid-auto-flow: column;
@@ -17,6 +16,11 @@
 	padding-right: 0;
 	align-items: center;
 	position: relative;
+	> * {
+		padding-left: 0;
+		margin-left: 0;
+		left: 0;
+	}
 
 	> *:last-child {
 		padding-right: var(--spacing-large);
@@ -35,6 +39,11 @@
 
 	&-single-row {
 		grid-template-rows: 1fr;
+		@media (--breakpoint-not-small) {
+			.card {
+				min-width: 250px;
+			}
+		}
 	}
 
 	&-double-row {
