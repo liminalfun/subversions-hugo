@@ -15,9 +15,17 @@
 	padding: var(--spacing-large);
 	padding-right: 0;
 	align-items: center;
+	position: relative;
+
+	> *:last-child {
+		padding-right: var(--spacing-large);
+	}
 
 	@media (--breakpoint-medium) {
 		padding-left: var(--spacing-extra-large);
+		> *:last-child {
+			padding-right: var(--spacing-extra-large);
+		}
 	}
 	@media (--breakpoint-large) {
 		height: var(--wrapper-height);
@@ -35,3 +43,21 @@
 			);
 	}
 }
+
+// WIP scroll cursor arrow
+
+/* .scroll-left {
+	position: fixed;
+	left: 0;
+	width: 20vw;
+	height: 60%;
+	cursor: url(/img/icons/arrow-left.svg), auto;
+}
+
+.scroll-right {
+	position: fixed;
+	right: 0;
+	width: 20vw;
+	height: 60%;
+	cursor: url(/img/icons/arrow-right.svg), auto;
+} */

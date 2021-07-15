@@ -1,4 +1,9 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.useTabs": true
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"javascript.format.insertSpaceAfterCommaDelimiter": false,
+	"javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+	"javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+	"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false
 }
