@@ -24,6 +24,7 @@
   }
 
   .nav-menu {
+    display: flex;
 
     &.active{
       right: var(--spacing-large);
@@ -35,19 +36,17 @@
 
     @media (--breakpoint-max-medium) {
       position: fixed;
-      overflow-y: scroll;
       right: -100%;
-      padding-bottom: 20em;
-      top: 4.2em;
+
       flex-direction: column;
-      width: 100%;
-      height: 100vh;
+      justify-content: center;
+
+      font-family: var(--font-family-dyslexic);
+      font-size: 1.5rem;
       text-align: center;
       transition: right 0.3s;
-      font-weight: var(--bold-font-weight);
       z-index: 999;
-      /* Mobile Background */
-      background-color: var(--color-1);
+
       /* Same as .bg-texture */
       background-image: url('/resources/paper.png');
       border-radius: var(--border-radius);
@@ -55,14 +54,19 @@
       top: calc(var(--spacing-extra-large) + var(--spacing-small));
       width: calc(100vw - (var(--spacing-large) * 2));
       height: var(--wrapper-height);
-    }
 
-    @media (--breakpoint-medium) {
-      display: flex;
+      
+      /* Mobile Background */
+      background-color: var(--color-10);
+      &.teal {
+        background-color: var(--color-3);
+      }
 
+      li {
+        padding: var(--spacing-medium);
+      }
     }
   }
-
 }
 
 .lang {

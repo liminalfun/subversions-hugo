@@ -4,6 +4,7 @@
   --light-gray: rgba(242, 242, 242, 1);
   --gray: rgba(121, 121, 121, 1);
   --black: rgba(43, 37, 35, 1);
+  --highlight: rgba(39, 38, 64, 0.3);
   --color-1: rgba(0, 100, 102, 1);      // teal lightest
   --color-2: rgba(6, 90, 96, 1);        // teal light
   --color-3: rgba(11, 82, 91, 1);       // teal mid

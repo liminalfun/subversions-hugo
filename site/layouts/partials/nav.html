@@ -13,7 +13,7 @@
   </div>
 
   <!-- Primary Nav -->
-	<ul class="nav-menu">
+	<ul class="nav-menu {{ if (eq .Type "issue" "submission") }} teal {{ end }}">
     {{ $currentPage := . }}
     {{ $url := .RelPermalink }}
     {{ range .Site.Menus.main }}
