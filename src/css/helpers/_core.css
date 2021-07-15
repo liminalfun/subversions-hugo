@@ -27,17 +27,17 @@ html {
 	}
 }
 
-.hide-lg {
+.hide-md {
 	text-align: center;
 	margin-bottom: var(--spacing-small);
-	@media (--breakpoint-large) {
+	@media (--breakpoint-medium) {
 		display: none;
 	}
 }
 
 .hide-sm {
 	display: none;
-	@media (--breakpoint-large) {
+	@media (--breakpoint-medium) {
 		display: block;
 	}
 }

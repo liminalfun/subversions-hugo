@@ -1,6 +1,6 @@
 ---
 title: Image Test
-slug: /submission/image-1
+slug: /image-1
 date: "2021"
 genre: Image
 artist:

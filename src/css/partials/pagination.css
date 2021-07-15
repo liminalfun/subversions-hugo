@@ -1,9 +1,9 @@
 .pagination {
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-medium) 0;
+  padding: var(--spacing-medium) var(--spacing-medium) 0;
 
-  @media (--breakpoint-large) {
+  @media (--breakpoint-medium) {
     position: absolute;
     bottom: 0;
     width: calc(100% - var(--spacing-extra-large) * 2)

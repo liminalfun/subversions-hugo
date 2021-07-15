@@ -1,20 +1,24 @@
 {{ define "main" }}
 <section class="submission wrapper">
-  <h1 class="hide-lg">{{.Title}}</h1>
-  {{ partial "submission-art" .Params }}
-  {{ partial "submission-info" .Params }}
-  <nav class="pagination">
-    <a href="/">
-      <img src="img/icons/arrow-left.svg" alt="Left arrow">
-    </a>
-    <a href="/">
-      <img src="img/icons/close.svg" alt="Close symbol">
-    </a>
-    <a href="/">
-      <img src="img/icons/arrow-right.svg" alt="Right arrow">
-    </a>
-  </nav>
+		
+	<h1 class="hide-md">{{.Title}}</h1>
+	{{ partial "submission-art" .Params }} 
+	{{ partial "submission-info" .Params}} 
+
+
+	<nav class="pagination">
+		<a href="/">
+			<img src="img/icons/arrow-left.svg" alt="Left arrow" />
+		</a>
+		<a href="/">
+			<img src="img/icons/close.svg" alt="Close symbol" />
+		</a>
+		<a href="/">
+			<img src="img/icons/arrow-right.svg" alt="Right arrow" />
+		</a>
+	</nav>
 </section>
+
 
 {{ partial "pagination" .Params }}
 

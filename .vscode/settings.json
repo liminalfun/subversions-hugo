@@ -1,9 +1,10 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"prettier.useTabs": true,
 	"javascript.format.insertSpaceAfterCommaDelimiter": false,
 	"javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.format.insertSpaceAfterSemicolonInForStatements": false,
-	"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false
+	"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+	"vetur.format.defaultFormatter.html": "none",
+	"prettier.bracketSpacing": false
 }
