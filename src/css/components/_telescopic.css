@@ -1,6 +1,17 @@
 .telescopic {
   color: white;
-  padding: var(--spacing-medium);
+  padding: var(--spacing-large);
+
+  h2, h3 {
+    margin-bottom: var(--spacing-medium);
+  }
+
+  @media (breakpoint-medium){
+    padding: var(--spacing-large);
+  }
+  @media (breakpoint-large){
+    padding: var(--spacing-extra-large);
+  }
 }
 
 .a {

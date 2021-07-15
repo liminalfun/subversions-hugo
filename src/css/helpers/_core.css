@@ -1,6 +1,7 @@
 /* Components ------------------------------------------------------------- */
 
 html {
+	scrollbar-width: none;
 }
 
 .wrapper {
