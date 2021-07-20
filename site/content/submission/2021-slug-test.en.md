@@ -1,6 +1,6 @@
 ---
 title: Slug Test
-date: "2021"
+year: "2021"
 genre: Essay
 artist:
   name: yes

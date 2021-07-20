@@ -1,9 +1,12 @@
 <section class="gallery gallery-double-row scroll">
 
-    {{ $totalSubmissions := where .Site.Pages "Type" "submission" }}
-    
-      {{ range $totalSubmissions }}
-        {{ partial "card-submission" . }}
+    {{ $totalSubmissions := where (where .Site.Pages "Type" "submission") "Params.title" "!=" nil }}
+    {{ $yearSubmissions := where $totalSubmissions "Params.year" "eq" .Params.year}}
+
+      {{ range $yearSubmissions }}
+
+          {{ partial "card-submission" . }}
+
       {{ end }}
 
 </section>

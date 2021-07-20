@@ -1,6 +1,6 @@
 ---
 title: Poem Test
-date: "2021"
+year: "2021"
 genre: Poetry
 artist:
   name: Lorem Ipsum

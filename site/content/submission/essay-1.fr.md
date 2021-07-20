@@ -1,5 +1,5 @@
 ---
-date: "2021"
+year: "2021"
 genre: Essay
 artist:
   name: Lorem Ipsum

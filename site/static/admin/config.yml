@@ -84,9 +84,9 @@ collections:
     folder: "site/content/submission"
     create: true 
     i18n: true
-    slug: "{{date}}-{{title}}"
-    summary: "{{title}} - {{date}} - {{genre}}"
-    sortable_fields: ["title", "date", "genre"]
+    slug: "{{year}}-{{title}}"
+    summary: "{{title}} - {{year}} - {{genre}}"
+    sortable_fields: ["title", "year", "genre"]
     view_filters: 
       - label: "Essay"
         field: genre
@@ -102,7 +102,7 @@ collections:
         pattern: 'Video'
     fields:
       - {label: "Title of Submission", name: "title", widget: "string", i18n: duplicate}
-      - {label: "Year / Issue", i18n: duplicate, name: "date", widget: relation, collection: "issue", search_fields: ['year'], value_field: "year", display_field: "{{year}} - {{title}}"}
+      - {label: "Year / Issue", i18n: duplicate, name: "year", widget: relation, collection: "issue", search_fields: ['year'], value_field: "year", display_field: "{{year}} - {{title}}"}
       - label: 'Type of Submission'
         name: 'genre'
         widget: 'select'

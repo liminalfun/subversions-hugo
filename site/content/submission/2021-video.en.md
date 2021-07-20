@@ -1,6 +1,6 @@
 ---
 title: Video
-date: "2021"
+year: "2021"
 genre: Video
 piece:
   - genre: video

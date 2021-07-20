@@ -1,6 +1,6 @@
 ---
 title: Video Test
-date: "2021"
+year: "2021"
 genre: Video
 artist:
   name: Lorem Ipsum
