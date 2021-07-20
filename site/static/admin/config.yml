@@ -7,8 +7,12 @@ media_library:
   name: uploadcare
   config:
     publicKey: 59f7efd702ceb358833a
+    previewStep: true
+    tabs: 'file url'
+    crop: '4:3, 3:4' 
   settings:
     autoFilename: true
+
 
 local_backend: true
 
@@ -62,8 +66,8 @@ collections:
     label_singular: "Issue"
     folder: "site/content/issue"
     create: true 
-    slug: "{{date}}"
-    summary: "{{date | date('YYYY')}}: {{title}}"
+    slug: "{{year}}"
+    summary: "{{filename}}: {{title}}"
     sortable_fields: ['year']
     i18n: true
     fields:
@@ -98,7 +102,7 @@ collections:
         pattern: 'Video'
     fields:
       - {label: "Title of Submission", name: "title", widget: "string", i18n: duplicate}
-      - {label: "Year / Issue", i18n: duplicate, name: "date", widget: relation, collection: "issue", search_fields: ['date'], value_field: "{{date}}", display_field: "{{date}} - {{title}}"}
+      - {label: "Year / Issue", i18n: duplicate, name: "date", widget: relation, collection: "issue", search_fields: ['year'], value_field: "year", display_field: "{{year}} - {{title}}"}
       - label: 'Type of Submission'
         name: 'genre'
         widget: 'select'
@@ -141,7 +145,7 @@ collections:
             name: 'essay'
             widget: 'object'
             fields: 
-              - {label: "Essay", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
+              - {label: "Essay", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [youtube, image], i18n: true}
           - label: 'Poetry'
             name: 'poetry'
             widget: 'object'
@@ -151,8 +155,9 @@ collections:
             name: 'video'
             widget: 'object'
             fields: 
-              - {label: "Video link", name: "link", widget: "file", i18n: duplicate}
-
+              - {label: "Youtube Video link", name: "link", widget: "string", i18n: duplicate, hint: "Please add only the Youtube video ID. You can find this by looking at the link and copy/pasting only the combination of letters and numbers at the end. Example: For a link like, https://www.youtube.com/watch?v=aygzWOiPusI, you would only copy/paste aygzWOiPusI into this field"}
+              - {label: "Video Preview Image", name: "img", widget: "image", i18n: duplicate, hint: "Used on the Issue page", required: false}
+              - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"

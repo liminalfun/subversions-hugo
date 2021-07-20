@@ -40,14 +40,14 @@
     width: 100%;
   }
 
-  .poem, .essay {
+  .poem, .essay, .video {
     padding: var(--spacing-large) var(--spacing-medium);
     @media (--breakpoint-large) {
       padding: var(--spacing-extra-large) var(--spacing-large);
     }
   }
 
-  img {
+  img, .video {
     height: 95%;
     width: 100%;
     object-fit: contain;
