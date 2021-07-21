@@ -16,12 +16,17 @@
 		text-transform: lowercase;
 		font-family: var(--font-family-dyslexic);
 	}
-	img {
-		border-radius: var(--border-radius);
-		border: 2px transparent solid;
-		object-fit: contain;
-		height: 100%;
-		align-self: start;
+	&.max-img{
+		min-width: 200px;
+		width: max-content !important;
+		max-width: 300px;
+		img {
+			border-radius: var(--border-radius);
+			border: 2px transparent solid;
+			object-fit: contain;
+			height: auto;
+			align-self: start;
+		}
 	}
 	.label {
 		padding: var(--spacing-small);
@@ -34,14 +39,9 @@
 		position: static;
 		color: var(--black);
 	}
-	&.max-img {
-		width: max-content !important;
-		max-width: 300px;
-	}
 	@media (--breakpoint-not-small) {
 		width: auto;
 		min-width: 200px;
-		max-width: calc(100vw / 2.4);
 		height: auto;
 	}
 	@media (--breakpoint-large) {

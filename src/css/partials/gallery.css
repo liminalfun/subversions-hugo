@@ -9,7 +9,8 @@
 
 .gallery {
 	max-height: var(--wrapper-height);
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	grid-auto-flow: column;
 	gap: var(--spacing-large);
 	padding: var(--spacing-large);
@@ -28,29 +29,30 @@
 
 	@media (--breakpoint-medium) {
 		padding-left: var(--spacing-extra-large);
-		> *:last-child {
-			padding-right: var(--spacing-extra-large);
-		}
+		padding-right: var(--spacing-extra-large);
 	}
 	@media (--breakpoint-large) {
 		height: var(--wrapper-height);
 		padding: var(--spacing-extra-large) 0;
+		padding-right: var(--spacing-extra-large);
 	}
 
 	&-single-row {
-		grid-template-rows: 1fr;
+		/* grid-template-rows: 1fr; */
 		@media (--breakpoint-not-small) {
 			.card {
 				min-width: 250px;
+				max-width: calc(100vw / 2.4);
 			}
 		}
 	}
 
 	&-double-row {
-		grid-template-rows: minmax(min-content, max-content) minmax(
+		flex-wrap: wrap;
+		/* grid-template-rows: minmax(min-content, max-content) minmax(
 				min-content,
 				max-content
-			);
+			); */
 	}
 }
 
