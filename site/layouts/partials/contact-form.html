@@ -3,7 +3,7 @@
 <section class="contact">
   <h2 class="">{{.title}}</h2>
 
-  <form action="">
+  <form name="contact" action="POST" netlify>
     <div class="">
       <!-- Name -->
       <fieldset class="name">
@@ -25,7 +25,7 @@
       <img src="/img/icons/message.svg" alt="">
     </fieldset>
     <!-- Button -->
-    <button type="submit" class="">{{.submit}}</button>
+    <button type="submit" class="button">{{.submit}}</button>
   </form>
 </section>
 {{ end }}
