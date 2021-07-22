@@ -2,6 +2,7 @@
 title: Image Example
 year: "2021"
 genre: Image
+order: 1
 artist:
   name: Name
   location: Tioh'tia:ke / "Montréal"

@@ -85,7 +85,7 @@ collections:
     create: true 
     i18n: true
     slug: "{{year}}-{{title}}"
-    summary: "{{fields.year}} – {{title}} – {{genre}}"
+    summary: "{{fields.year}} – {{fields.order}} – {{title}} – {{genre}}"
     sortable_fields: ["title", "year", "genre"]
     view_filters: 
       - label: "Essay"
@@ -108,6 +108,12 @@ collections:
         widget: 'select'
         i18n: duplicate
         options: ["Image", "Essay", "Poetry", "Video"]
+      - label: "Order in issue"
+        name: "order"
+        widget: "number"
+        i18n: duplicate
+        required: false
+        hint: "Submissions will appear on the issue page in chronological order. Submissions without a number will appear after those with numbers."
       - label: 'Artist Info'
         name: 'artist'
         widget: object
@@ -132,7 +138,7 @@ collections:
         required: false
         i18n: true
         fields:
-          - {label: "Image", name: "image", widget: "image", i18n: duplicate}
+          - {label: "Image", name: "image", widget: "image", i18n: duplicate, required: false}
           - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
       - label: "Essay or Poem"
         name: "text"

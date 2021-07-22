@@ -2,6 +2,7 @@
 title: Emerging Creators Unit | E-Transfers
 year: "2021"
 genre: Video
+order: 4
 artist:
   name: Gabe Maharjan and Merlin Simard
   bio: Written and performed by GABE MAHARJAN and MERLIN SIMARD, with funding from

@@ -3,7 +3,7 @@
     {{ $totalSubmissions := where (where .Site.Pages "Type" "submission") "Params.title" "!=" nil }}
     {{ $yearSubmissions := where $totalSubmissions "Params.year" "eq" .Params.year}}
 
-      {{ range $yearSubmissions }}
+      {{ range sort $yearSubmissions "Params.order" "asc"}}
 
           {{ partial "card-submission" . }}
 
