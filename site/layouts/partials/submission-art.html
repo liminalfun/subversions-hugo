@@ -1,22 +1,15 @@
 <div class="art {{ if or (eq .genre "Poetry") (eq .genre "Essay")}}bg-texture{{ end }}">
-  {{ range .piece }}
-    {{ if eq .genre "poetry" }}
-      <div class="poem">
-        {{ .poem | markdownify }}
-      </div>
-    {{ end }}
-    {{ if eq .genre "essay" }}
-      <div class="essay">
-      {{ .essay | markdownify }}
-      </div>
-    {{ end }}
-    {{ if eq .genre "image" }}
-      <img src="{{ .img }}" alt="{{ .alt }}">
-    {{ end }}
-    {{ if eq .genre "video" }}
-    <div class="video">   
-      <iframe src="https://www.youtube.com/embed/{{.link}}" width="100%" height="100%" frameborder="0" title="{{.title}}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  {{ if .text }}
+    <div class="poem essay">
+      {{ .text | markdownify }}
     </div>
-    {{ end }}
+  {{ end }}
+  {{ if .img }}
+    <img data-blink-src="{{ .img.image }}" alt="{{ .img.alt }}">
+  {{ end }}
+  {{ with .video }}
+  <div class="video">   
+    <iframe src="https://www.youtube.com/embed/{{.link}}" width="100%" height="100%" frameborder="0" title="{{.title}}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
   {{ end }}
 </div>

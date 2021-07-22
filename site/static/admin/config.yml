@@ -67,7 +67,7 @@ collections:
     folder: "site/content/issue"
     create: true 
     slug: "{{year}}"
-    summary: "{{filename}}: {{title}}"
+    summary: "{{fields.year}}: {{title}}"
     sortable_fields: ['year']
     i18n: true
     fields:
@@ -85,7 +85,7 @@ collections:
     create: true 
     i18n: true
     slug: "{{year}}-{{title}}"
-    summary: "{{title}} - {{year}} - {{genre}}"
+    summary: "{{fields.year}} – {{title}} – {{genre}}"
     sortable_fields: ["title", "year", "genre"]
     view_filters: 
       - label: "Essay"
@@ -126,38 +126,30 @@ collections:
             {label: "Facebook name", name: "name", widget: "string", i18n: duplicate, required: false},
             {label: "Facebook link", name: "link", widget: "string", i18n: duplicate, required: false}
           ]}
-      - label: 'Piece'
-        name: 'piece'
-        label_singular: ""
-        widget: 'list'
-        typeKey: "genre"
-        hint: "Remember to add each piece in both French & English! :)"
+      - label: 'Image'
+        name: 'img'
+        widget: 'object'
+        required: false
         i18n: true
-        types:
-          - label: 'Image'
-            name: 'image'
-            widget: 'object'
-            typeKey: "genre"
-            fields:
-              - {label: "Image", name: "img", widget: "image", i18n: duplicate}
-              - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
-          - label: 'Essay'
-            name: 'essay'
-            widget: 'object'
-            fields: 
-              - {label: "Essay", name: "text", widget: "markdown", buttons: [bold, italic, link], editor_components: [youtube, image], i18n: true}
-          - label: 'Poetry'
-            name: 'poetry'
-            widget: 'object'
-            fields: 
-              - {label: "Poem", name: "poem", widget: "markdown", buttons: [bold, italic, link], editor_components: [], i18n: true}
-          - label: 'Video'
-            name: 'video'
-            widget: 'object'
-            fields: 
-              - {label: "Youtube Video link", name: "link", widget: "string", i18n: duplicate, hint: "Please add only the Youtube video ID. You can find this by looking at the link and copy/pasting only the combination of letters and numbers at the end. Example: For a link like, https://www.youtube.com/watch?v=aygzWOiPusI, you would only copy/paste aygzWOiPusI into this field"}
-              - {label: "Video Preview Image", name: "img", widget: "image", i18n: duplicate, hint: "Used on the Issue page", required: false}
-              - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
+        fields:
+          - {label: "Image", name: "image", widget: "image", i18n: duplicate}
+          - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
+      - label: "Essay or Poem"
+        name: "text"
+        widget: "markdown"
+        buttons: [bold, italic, link]
+        editor_components: [image]
+        i18n: true
+        required: false
+      - label: 'Video'
+        name: 'video'
+        widget: 'object'
+        i18n: true
+        required: false
+        fields: 
+          - {label: "Youtube Video ID", name: "link", widget: "string", i18n: duplicate, required: false,  hint: "Please add only the Youtube video ID. You can find this by looking at the link and copy/pasting only the combination of letters and numbers at the end. Example: For a link like, https://www.youtube.com/watch?v=aygzWOiPusI, you would only copy/paste aygzWOiPusI into this field"}
+          - {label: "Video Preview Image", name: "img", widget: "image", i18n: duplicate, required: false, hint: "Used on the Issue page"}
+          - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"
