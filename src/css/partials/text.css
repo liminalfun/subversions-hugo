@@ -3,6 +3,7 @@
 	padding: var(--spacing-large);
 	padding-bottom: 0;
 	text-align: center;
+	scrollbar-width: none;
 
 	.scroll-hint {
 		margin-top: var(--spacing-large);
@@ -29,4 +30,8 @@
 
 .info-text {
 	align-self: start;
+}
+
+.info-text::-webkit-scrollbar {
+	width: 0;
 }

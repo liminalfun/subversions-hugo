@@ -16,11 +16,21 @@ html {
 		/* padding: var(--spacing-extra-large); */
 	}
 }
+.wrapper::-webkit-scrollbar-thumb {
+	background-color: var(--white);
+	border-radius: 20px;
+}
+
+.wrapper::-webkit-scrollbar {
+	width: thin;
+	background-color: var(--gradient-purple);
+}
 
 .grid-col-2 {
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;
+	scrollbar-width: none;
 
 	@media (--breakpoint-large) {
 		grid-template-columns: 1fr 3fr;
