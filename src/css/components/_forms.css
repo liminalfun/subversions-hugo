@@ -1,6 +1,6 @@
 .contact {
 	padding: var(--spacing-large);
-	align-self: start;
+	align-self: flex-start;
 	max-width: 100%;
 
 	@media (--breakpoint-medium) {

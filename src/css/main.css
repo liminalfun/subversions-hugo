@@ -89,6 +89,7 @@
 @import "./helpers/_bg";
 @import "./helpers/_typography";
 @import "./helpers/_core";
+@import "./helpers/_scrollbar";
 
 /* Components */
 

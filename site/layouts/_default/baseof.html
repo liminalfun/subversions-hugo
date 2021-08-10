@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}" class="gradient purple {{ if (eq .Type "issue" "submission") }} blue {{ end }}">
+<html lang="{{ $.Site.Language.Lang }}" class="scrollbar gradient purple {{ if (eq .Type "issue" "submission") }} blue {{ end }}">
   {{ partial "head" . }}
-  <body class="sans-serif">
+  <body>
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
     <div class="bg-texture shadow {{ if eq .Type "submission"}}shadow-teal{{end}}"/>

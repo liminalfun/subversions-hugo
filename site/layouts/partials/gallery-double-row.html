@@ -1,4 +1,4 @@
-<section class="gallery gallery-double-row scroll">
+<section class="gallery gallery-double-row scroll scrollX">
 
     {{ $totalSubmissions := where (where .Site.Pages "Type" "submission") "Params.title" "!=" nil }}
     {{ $yearSubmissions := where $totalSubmissions "Params.year" "eq" .Params.year}}

@@ -1,12 +1,3 @@
-.scroll {
-	/* Scroll behaviour */
-	overflow-x: scroll;
-	overflow-y: hidden;
-
-	/* Scroll bar */
-	scrollbar-width: none;
-}
-
 .gallery {
 	max-height: var(--wrapper-height);
 	display: flex;
@@ -15,7 +6,7 @@
 	gap: var(--spacing-large);
 	padding: var(--spacing-large);
 	padding-right: var(--spacing-large);
-	align-items: start;
+	align-items: flex-start;
 	position: relative;
 	> * {
 		padding-left: 0;
@@ -35,8 +26,9 @@
 	}
 
 	&-single-row {
-		/* grid-template-rows: 1fr; */
+		flex-direction: row;
 		@media (--breakpoint-not-small) {
+			align-items: center
 			.card {
 				min-width: 250px;
 				max-width: calc(100vw / 2.4);

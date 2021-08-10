@@ -9,6 +9,10 @@
 	border-radius: var(--border-radius);
 	border: 2px transparent solid;
 
+	img {
+		border-radius: var(--border-radius);
+	}
+
 	&-submission {
 		max-height: 50vh;
 	}
@@ -24,7 +28,7 @@
 			border: 2px transparent solid;
 			object-fit: contain;
 			height: auto;
-			align-self: start;
+			align-self: flex-start;
 		}
 	}
 	.label {
