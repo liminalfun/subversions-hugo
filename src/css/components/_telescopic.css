@@ -1,10 +1,11 @@
 .telescopic {
   color: white;
   padding: var(--spacing-large);
+  font-family: var(--font-family-dyslexic);
+  font-size: var(--h2-size);
+  line-height: 200%;
+  margin-bottom: var(--spacing-extra-large);
 
-  h2, h3 {
-    margin-bottom: var(--spacing-medium);
-  }
 
   @media (breakpoint-medium){
     padding: var(--spacing-large);
@@ -14,16 +15,8 @@
   }
 }
 
-.a {
-
-}
-
-.b {
-
-}
-
-.c {
-
+._b {
+  background-color: var(--highlight);
 }
 
 .reveal {

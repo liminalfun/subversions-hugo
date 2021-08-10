@@ -32,6 +32,36 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Intro Blurb", name: "blurb", widget: "list", i18n: true, fields: [
+        {label: Text (tear 1), name: "text", widget: text},
+        {label: "Statement", name: "parent", widget: "list", i18n: true, fields: [
+          {label: Text (tier 2), name: "text", widget: text},
+          {label: "Statement ", name: "child", widget: "list", i18n: true, fields: [
+            {label: Text (tier 3), name: "text", widget: text},
+            {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+              {label: Text (tier 4), name: "text", widget: text},
+              {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                {label: Text (tier 5), name: "text", widget: text},
+                {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                  {label: Text (tier 6), name: "text", widget: text},
+                  {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                    {label: Text (tier 7), name: "text", widget: text},
+                    {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                      {label: Text (tier 8), name: "text", widget: text},
+                      {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                        {label: Text (tier 9), name: "text", widget: text},
+                        {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+                          {label: Text (tier 10), name: "text", widget: text},
+                        ]}
+                      ]}
+                    ]}
+                  ]}
+                ]}
+              ]}
+            ]}
+          ]}
+        ]}
+      ]}
   - name: "about"
     label: "About Page"
     folder: "site/content/about"
