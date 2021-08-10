@@ -5,6 +5,9 @@
   font-size: var(--h2-size);
   line-height: 200%;
   margin-bottom: var(--spacing-extra-large);
+  * {
+    padding: 0;
+  }
 
 
   @media (breakpoint-medium){
@@ -17,6 +20,7 @@
 
 ._b {
   background-color: var(--highlight);
+  margin-right: .5rem;
 }
 
 .reveal {

@@ -74,6 +74,166 @@
   </span>
 </div>
 
+{{/*  WIP 2  */}}
+{{/*  <div class='telescopic'>
+  {{ range .intro }}
+    {{ if eq .type "static" }}
+        {{ .text }}
+    {{ end }}
+
+    {{ if eq .type "expandable" }}
+      <span class='a'>
+        <span class='b'>
+          {{ .text }}
+        </span>
+
+        {{ range .expanded }}
+          <span class='c'>
+            {{ if eq .type "static" }}
+              {{ .text }}
+            {{ end }}
+            {{ if eq .type "expandable" }}
+              <span class='a'>
+                <span class="b">
+                  {{ .text }}
+                </span>
+
+                {{ range .expanded }}
+                  <span class='c'>
+                    {{ if eq .type "static" }}
+                      {{ .text }}
+                    {{ end }}
+                    {{ if eq .type "expandable" }}
+                      <span class='a'>
+                        <span class="b">
+                          {{ .text }}
+                        </span>
+
+                        {{ range .expanded }}
+                          <span class='c'>
+                            {{ if eq .type "static" }}
+                              {{ .text }}
+                            {{ end }}
+                            {{ if eq .type "expandable" }}
+                              <span class='a'>
+                                <span class="b">
+                                  {{ .text }}
+                                </span>
+
+                                {{ range .expanded }}
+                                  <span class='c'>
+                                    {{ if eq .type "static" }}
+                                      {{ .text }}
+                                    {{ end }}
+                                    {{ if eq .type "expandable" }}
+                                      <span class='a'>
+                                        <span class="b">
+                                          {{ .text }}
+                                        </span>
+                                      </span>
+                                    {{ end }}
+                                  </span>
+                                {{ end }}
+                                
+                              </span>
+                            {{ end }}
+                              
+                        {{ end }}
+
+                      </span>
+                    {{ end }}
+                {{ end }}
+              </span>
+            {{ end }}
+          </span>
+        {{ end }}
+
+      </span>
+    {{ end }}
+  {{ end }}
+
+</div>  */}}
+
+
+{{/*  WIP 1  */}}
+{{/*  <div class='telescopic'>
+  {{ range .blurb }}
+   {{ .text }}
+    {{ range .parent }}
+      <span class='a'>
+        <span class='b'>
+          {{ .text }}
+        </span>
+        {{ range .child }}
+          <span class='c'>
+            {{ .text }}
+            {{ range .child }}
+              <span class='a'>
+                <span class='b'>
+                  {{ .text }}
+                </span>
+                {{ range .child }}
+                  <span class='c'>
+                    {{ .text }} 
+                    {{ range .child }}
+                      <span class='a'>
+                        <span class='b'>
+                          {{ .text }}
+                        </span>
+                        {{ range .child }}
+                          <span class='c'>
+                            {{ .text }}
+                            {{ range .child }}
+                              <span class='a'>
+                                <span class='b'>
+                                    {{ .text }}
+                                </span>
+                                {{ range .child }}
+                                <span class='c'>
+                                  {{ .text }}
+                                  {{ range .child }}
+                                    <span class='a'>
+                                      <span class='b'>
+                                        {{ .text }}
+                                      </span>
+                                      {{ range .child }}
+                                      <span class='c'>
+                                        {{ .text }}
+                                        {{ range .child }}
+                                          <span class='a'>
+                                            <span class='b'>
+                                              {{ .text }}
+                                            </span>
+                                            {{ range .child }}
+                                            <span class='c'>
+                                              {{ .text }}
+                                            </span>
+                                            {{ end }}
+                                          </span>
+                                        {{ end }}
+                                      </span>
+                                      {{ end }}
+                                    </span>
+                                  {{ end }}
+                                </span>
+                                {{ end }}
+                              </span>
+                            {{ end }}
+                          </span>
+                        {{ end }}
+                      </span>
+                    {{ end }} 
+                  </span>
+                {{ end }}
+              </span>
+            {{ end }}
+          </span>
+        {{ end }}
+      </span>
+    {{ end }}
+  {{ end }}
+</div>  */}}
+
 {{/*  <div class="telescopic">
   {{ range .blurb }}
    {{ .text }}

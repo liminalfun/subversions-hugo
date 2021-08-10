@@ -32,36 +32,50 @@ collections:
     i18n: true
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Intro Blurb", name: "blurb", widget: "list", i18n: true, fields: [
-        {label: Text (tear 1), name: "text", widget: text},
-        {label: "Statement", name: "parent", widget: "list", i18n: true, fields: [
-          {label: Text (tier 2), name: "text", widget: text},
-          {label: "Statement ", name: "child", widget: "list", i18n: true, fields: [
-            {label: Text (tier 3), name: "text", widget: text},
-            {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-              {label: Text (tier 4), name: "text", widget: text},
-              {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                {label: Text (tier 5), name: "text", widget: text},
-                {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                  {label: Text (tier 6), name: "text", widget: text},
-                  {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                    {label: Text (tier 7), name: "text", widget: text},
-                    {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                      {label: Text (tier 8), name: "text", widget: text},
-                      {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                        {label: Text (tier 9), name: "text", widget: text},
-                        {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
-                          {label: Text (tier 10), name: "text", widget: text},
-                        ]}
-                      ]}
-                    ]}
-                  ]}
-                ]}
-              ]}
-            ]}
-          ]}
-        ]}
-      ]}
+      # - {label: "Intro", name: "intro", widget: list, i18n: true, types: [
+      #   {label: "Static Text", name: "static", widget: object, summary: "{{fields.text}}", fields: [
+      #     {label: "Text", name: "text", widget: text, hint: "This text will NOT expand when clicked."}
+      #   ]},
+      #   {label: "Expandable Text", name: "expandable", widget: object, fields: [
+      #     {label: "Text that will expand", name: "text", widget: text, hint: "This text will expand when clicked."},
+      #     {label: "Expanded Text", name: "expanded", widget: list, types: [
+      #       {label: "Static Text", name: "static", widget: object, fields: [
+      #         {label: "Text", name: "text", widget: text, hint: "This text will NOT expand when clicked."}
+      #       ]}
+      #     ]}
+      #   ]}
+
+      # ]}
+      # - {label: "Intro Blurb", name: "blurb", widget: "list", i18n: true, fields: [
+      #   {label: Text (tier 1), name: "text", widget: text},
+      #   {label: "Statement", name: "parent", widget: "list", i18n: true, fields: [
+      #     {label: Text (tier 2), name: "text", widget: text},
+      #     {label: "Statement ", name: "child", widget: "list", i18n: true, fields: [
+      #       {label: Text (tier 3), name: "text", widget: text},
+      #       {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #         {label: Text (tier 4), name: "text", widget: text},
+      #         {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #           {label: Text (tier 5), name: "text", widget: text},
+      #           {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #             {label: Text (tier 6), name: "text", widget: text},
+      #             {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #               {label: Text (tier 7), name: "text", widget: text},
+      #               {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #                 {label: Text (tier 8), name: "text", widget: text},
+      #                 {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #                   {label: Text (tier 9), name: "text", widget: text},
+      #                   {label: "Statement", name: "child", widget: "list", i18n: true, fields: [
+      #                     {label: Text (tier 10), name: "text", widget: text},
+      #                   ]}
+      #                 ]}
+      #               ]}
+      #             ]}
+      #           ]}
+      #         ]}
+      #       ]}
+      #     ]}
+      #   ]}
+      # ]}
   - name: "about"
     label: "About Page"
     folder: "site/content/about"

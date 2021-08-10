@@ -1,15 +1,35 @@
 ---
 title: Home
+intro:
+  - type: static
+    text: Subversions
+  - type: expandable
+    text: is
+    expanded:
+      - type: static
+        text: is static
+      - type: expandable
+        text: and expandable
+        expanded:
+          - type: static
+            text: and expandable forever.
+          - type: expandable
+            text: How expandable
+            expanded:
+              - type: static
+                text: How expandable is it really
+          - type: static
+            text: might you ask?
 blurb:
   - text: Subversions
     parent:
       - text: is
         child:
-          - text: collaborative
+          - text: is collaborative
             child:
               - text: and
                 child:
-                  - text: inclusive. A
+                  - text: and inclusive. A
                     child:
                       - text: platform,
                         child:
@@ -25,12 +45,11 @@ blurb:
                             child:
                               - text: uplifting
                                 child:
-                                  - text: (and relying on)
+                                  - text: uplifting (and relying on)
                               - text: each other within and beyond
-                                child: []
                               - text: academia.
                                 child:
-                                  - text: That said, Subversions
+                                  - text: academia. That said, Subversions
                                   - text: is
                                     child:
                                       - text: "is ever-shifting, and "
