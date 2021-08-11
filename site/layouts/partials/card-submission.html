@@ -1,15 +1,17 @@
-<a href="{{ .RelPermalink }}" title="{{ .Title }}" alt="{{ .Title }}">
-  <article class="card card-submission {{ if or (eq .Params.genre "Essay") (eq .Params.genre "Poetry") }}bg-texture{{end}} {{ if or (eq .Params.genre "Image") (eq .Params.genre "Video")}}max-img{{ end }}">
-    {{ with .Params.img }}
-      <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
-    {{ end }}
-    {{ with .Params.video }}
-      <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
-    {{ end }}
-    <div class="label">
-      <h4>{{ .Title }}</h4>
-      <p>{{ .Params.artist.name }}</p>
-      <p class="genre">**{{ .Params.genre }}**</p>
-    </div>
-  </article>
-</a>
+<div>
+  <a href="{{ .RelPermalink }}" title="{{ .Title }}" alt="{{ .Title }}">
+    <article class="card card-submission {{ if or (eq .Params.genre "Essay") (eq .Params.genre "Poetry") }}bg-texture{{end}} {{ if or (eq .Params.genre "Image") (eq .Params.genre "Video")}}max-img{{ end }}">
+      {{ with .Params.img }}
+        <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
+      {{ end }}
+      {{ with .Params.video }}
+        <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
+      {{ end }}
+      <div class="label">
+        <h4>{{ .Title }}</h4>
+        <p>{{ .Params.artist.name }}</p>
+        <p class="genre">**{{ .Params.genre }}**</p>
+      </div>
+    </article>
+  </a>
+</div>
