@@ -53,7 +53,6 @@
 	function onMouseMove(e) {
 		cursor.x = e.clientX + 6;
 		cursor.y = e.clientY - 48;
-		console.log(e.clientY);
 
 		addParticle(
 			cursor.x,
