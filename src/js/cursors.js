@@ -14,7 +14,7 @@
 	var possibleEmoji = ["*"];
 	var width = window.innerWidth;
 	var height = window.innerHeight;
-	var cursor = {x: width / 2, y: width / 2};
+	var cursor = {x: width / 2, y: height / 2};
 	var particles = [];
 
 	function init() {
@@ -51,8 +51,9 @@
 	}
 
 	function onMouseMove(e) {
-		cursor.x = e.clientX;
-		cursor.y = e.clientY;
+		cursor.x = e.clientX + 6;
+		cursor.y = e.clientY - 48;
+		console.log(e.clientY);
 
 		addParticle(
 			cursor.x,
