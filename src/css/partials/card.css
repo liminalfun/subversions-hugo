@@ -19,6 +19,7 @@
 	.genre {
 		text-transform: lowercase;
 		font-family: var(--font-family-dyslexic);
+		margin-bottom: 0;
 	}
 	&.max-img{
 		width: 250px !important;
