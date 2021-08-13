@@ -88,7 +88,7 @@ collections:
         {label: "Facebook Link", name: "fb", widget: "string", i18n: duplicate, required: false},
         {label: "Instagram Link", name: "ig", widget: "string", i18n: duplicate, required: false},
       ]}
-      - {label: "Contact Form", name: "contact", widget: "object", i18n: true, fields: [
+      - {label: "Contact Form Labels", name: "contact", widget: "object", i18n: true, collapsed: true, fields: [
         {label: "Title", name: "title", widget: "string", i18n: true},
         {label: "Name Label", name: "name", widget: "string", i18n: true},
         {label: "Email Label", name: "email", widget: "string", i18n: true},
