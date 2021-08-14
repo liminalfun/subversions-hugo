@@ -1,10 +1,10 @@
 html {
     overflow-y: hidden;
     overflow-x: hidden;
+    overscroll-behavior: contain;
 }
 
 .scrollbar {
-    overscroll-behavior: contain;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -13,7 +13,6 @@ html {
 
 .scrollX {
     overflow-x: scroll;
-    overscroll-behavior: contain;
     scrollbar-width: none;
     touch-action: pan-x;
     -ms-overflow-style: none;
@@ -24,7 +23,6 @@ html {
 
 .scrollY {
     overflow-y: scroll;
-    overscroll-behavior: contain;
     scrollbar-width: none;
     touch-action: pan-y;
     -ms-overflow-style: none;

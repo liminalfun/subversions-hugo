@@ -1,9 +1,10 @@
 {{ define "main" }}
 
-<main class="wrapper scrollbar">
-	<div class="grid-col-2">
-		{{ partial "issue-text" .Params }} {{ partial "gallery-single-row" . }}
-	</div>
-</main>
+    <main class="wrapper scrollY">
+        <div class="grid-col-2">
+            {{ partial "issue-text" .Params }}
+            {{ partial "gallery-single-row" . }}
+        </div>
+    </main>
 
 {{ end }}

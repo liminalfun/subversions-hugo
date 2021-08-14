@@ -42,6 +42,10 @@
   z-index: 0;
   width: calc(100vw - (var(--spacing-large) * 2));
   height: var(--wrapper-height);
+
+  @media (--breakpoint-max-medium) {
+		max-height: 85%;
+	}
 }
 
 .shadow-teal {

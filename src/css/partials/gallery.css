@@ -15,6 +15,13 @@
 
 	}
 
+	@media (--breakpoint-max-medium) {
+		max-height: 100%;
+		> * {
+			margin-right: var(--spacing-large);
+			margin-bottom: var(--spacing-large);
+		}
+	}
 	@media (--breakpoint-medium) {
 		padding-left: var(--spacing-extra-large);
 		padding-right: var(--spacing-extra-large);

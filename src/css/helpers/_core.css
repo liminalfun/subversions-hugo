@@ -1,3 +1,12 @@
+/* Fix heights on mobile */
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+  }
+  html {
+	height: -webkit-fill-available;
+  }
+
 /* Components ------------------------------------------------------------- */
 
 .wrapper {
@@ -7,6 +16,9 @@
 
 	@media (--breakpoint-large) {
 		/* padding: var(--spacing-extra-large); */
+	}
+	@media (--breakpoint-max-medium) {
+		max-height: 100%;
 	}
 }
 
