@@ -1,5 +1,10 @@
 {{ define "main" }}
-<main class="wrapper scrollbar">
-  {{ partial "telescopic" .Params }}
-</main>
+    <main class="wrapper scrollbar">
+        {{ if eq .Site.Language.LanguageName "English"}}
+            {{ partial "telescopic-en" .Params }}
+        {{ end }}
+        {{ if eq .Site.Language.LanguageName "Français"}}
+            {{ partial "telescopic-fr" .Params }}
+        {{ end }}
+    </main>
 {{ end }}
