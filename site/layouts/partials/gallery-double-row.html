@@ -3,10 +3,11 @@
     {{ $totalSubmissions := where (where .Site.Pages "Type" "submission") "Params.title" "!=" nil }}
     {{ $yearSubmissions := where $totalSubmissions "Params.year" "eq" .Params.year}}
 
-      {{ range sort $yearSubmissions "Params.order" "asc"}}
+    {{ range sort $yearSubmissions "Params.order" "asc"}}
 
-          {{ partial "card-submission" . }}
+        {{ partial "card-submission" . }}
 
-      {{ end }}
+    {{ end }}
 
 </section>
+<p class="scroll-hint">scroll →</p>

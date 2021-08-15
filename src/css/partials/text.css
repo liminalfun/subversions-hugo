@@ -4,10 +4,8 @@
 	padding-bottom: 0;
 	text-align: center;
 
-	.scroll-hint {
-		margin-top: var(--spacing-large);
-		font-weight: bold;
-		max-width: 100%;
+	.text {
+		padding-top: var(--spacing-medium);
 	}
 
 	@media (--breakpoint-not-small) {
@@ -28,4 +26,12 @@
 
 .info-text {
 	align-self: flex-start;
+}
+.scroll-hint {
+	margin-top: var(--spacing-large);
+	font-weight: bold;
+	max-width: 100%;
+	position: absolute;
+	right: var(--spacing-large);
+	bottom: var(--spacing-medium);
 }

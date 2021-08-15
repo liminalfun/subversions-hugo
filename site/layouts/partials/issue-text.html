@@ -1,9 +1,5 @@
 <section class="issue-text scrollbar">
-  <time>{{ .year }}</time>
-  <h1>{{ .title }}</h1>
-  <div>{{ .text | markdownify }}</div>
-  
-  <p class="scroll-hint">scroll →</p>
- 
-
+    <h1>{{ .title }}</h1>
+    <time class="year">{{ .year }}</time>
+    <div class="text">{{ .text | markdownify }}</div>
 </section>

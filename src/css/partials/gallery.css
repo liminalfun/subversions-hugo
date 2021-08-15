@@ -16,9 +16,9 @@
 	}
 
 	@media (--breakpoint-max-medium) {
-		max-height: 100%;
+		height: 100%;
 		> * {
-			margin-right: var(--spacing-large);
+			margin-right: var(--spacing-medium);
 			margin-bottom: var(--spacing-large);
 		}
 	}

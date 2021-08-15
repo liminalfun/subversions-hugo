@@ -14,7 +14,7 @@ html {
 .scrollX {
     overflow-x: scroll;
     scrollbar-width: none;
-    touch-action: pan-x;
+    /* touch-action: pan-x; */
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
 }
