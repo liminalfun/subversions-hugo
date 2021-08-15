@@ -54,6 +54,7 @@
       top: calc(var(--spacing-extra-large) + var(--spacing-small));
       width: calc(100vw - (var(--spacing-large) * 2));
       height: var(--wrapper-height);
+      max-height: 85%;
 
       
       /* Mobile Background */
