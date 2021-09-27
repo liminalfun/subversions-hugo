@@ -2,10 +2,15 @@
 title: She is what she was
 year: "2021"
 genre: Essay
-order: 2
+order: 3
 artist:
-  name: Camille Chabot
-  bio: ""
+  name: "Camille Chabot "
+  bio: "Camille is a 28 year old indigenous student at UQAM. Rediscovering her
+    roots and heritage through art and writing, she aims to express herself in
+    ways that can educate and open dialogue. "
+  location: Tioh'tia:ke / "Montréal"
+  pronouns: ""
+  email: chabot-carignan.camille@courrier.uqam.ca
 text: "I am Metis. My father is white Canadian. My mother is Algonquin. My
   identity has changed throughout the years and continues to do so as I grow
   older and as I struggle to find my place within society. As of today, I

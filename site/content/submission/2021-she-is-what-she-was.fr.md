@@ -2,11 +2,11 @@
 title: She is what she was
 year: "2021"
 genre: Essay
-order: 2
+order: 3
 artist:
-  name: Camille Chabot
-  location: null
-  email: null
+  name: "Camille Chabot "
+  location: Tioh'tia:ke / "Montréal"
+  email: chabot-carignan.camille@courrier.uqam.ca
   ig:
     ? name
     ? link
