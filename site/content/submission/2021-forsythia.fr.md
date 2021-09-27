@@ -13,5 +13,5 @@ artist:
     ? name
     ? link
 img:
-  image: https://ucarecdn.com/a2a84ab6-74bc-4a58-941e-a9cce9e5c3c9/-/crop/1680x1260/0,666/-/preview/forsythia.jpg
+  image: https://ucarecdn.com/a2a84ab6-74bc-4a58-941e-a9cce9e5c3c9/-/crop/1680x2241/0,351/-/preview/forsythia.jpg
 ---
