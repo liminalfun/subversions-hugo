@@ -1,18 +1,18 @@
 ---
-title: Poem Test
+title: Holding Her Down
 year: "2021"
 genre: Poetry
-order: 3
+order: 7
 artist:
-  name: Lorem Ipsum
-  location: "Tiohtia:ke "
-  email: lorem@ipsum.com
+  name: Melissa-Ann Perreiro Ledo
+  location: Tioh'tia:ke / "Montréal"
+  email: ledo.melissa.ann@gmail.com
   ig:
     name: ighandle
-    link: https://ig.com
+    link: https://www.instagram.com/thequeerestlittleledo/
   fb:
-    name: facebook name
-    link: https://fb.com
+    name: ""
+    link: https://www.facebook.com/thequeerestlittleledo
 text: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue libero elit
   elit id. Pulvinar nullam pulvinar sed eu sed eu sit. Sed sit lectus facilisi
