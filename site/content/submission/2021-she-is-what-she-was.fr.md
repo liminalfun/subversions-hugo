@@ -2,7 +2,7 @@
 title: She is what she was
 year: "2021"
 genre: Essay
-order: 3
+order: 27
 artist:
   name: "Camille Chabot "
   location: Tioh'tia:ke / "Montréal"
