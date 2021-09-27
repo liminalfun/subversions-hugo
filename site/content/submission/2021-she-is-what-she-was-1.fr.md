@@ -2,6 +2,7 @@
 title: She is what she was
 year: "2021"
 genre: Image
+order: 3
 artist:
   name: Anna Lune
   location: Tioh'tia:ke / "Montréal"
