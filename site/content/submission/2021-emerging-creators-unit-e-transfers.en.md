@@ -1,5 +1,5 @@
 ---
-title: Emerging Creators Unit | E-Transfers
+title: E-Transfers
 year: "2021"
 genre: Video
 order: 4
@@ -7,6 +7,8 @@ artist:
   name: Gabe Maharjan and Merlin Simard
   bio: Written and performed by GABE MAHARJAN and MERLIN SIMARD, with funding from
     the National Theatre School’s ART APART program.
+  pronouns: Gabe (they/them) Merlin (she/they/elle/iel)
+  location: Gabe - Tioh'tia:ke / "Montréal" / Merlin - Tkarón:to/Toronto
 video:
   link: oxzZNXxhhp4
   image: https://ucarecdn.com/688f5b61-b18f-4b65-a644-5e5ddcd3b0b0/-/crop/684x513/156,0/-/preview/Screen
