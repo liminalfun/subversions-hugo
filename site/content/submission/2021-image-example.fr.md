@@ -1,15 +1,15 @@
 ---
-title: Image Example
+title: Tits and songs
 year: "2021"
 genre: Image
 order: 1
 artist:
-  name: Name
+  name: Thellone
   location: Tioh'tia:ke / "Montréal"
-  email: null
+  email: Leonorethellend@hotmail.com
   ig:
-    ? name
-    ? link
+    name: "@lathellonne"
+    link: null
   fb:
     ? name
     ? link
