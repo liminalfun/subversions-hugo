@@ -151,7 +151,7 @@ collections:
         name: 'genre'
         widget: 'select'
         i18n: duplicate
-        options: ["Image", "Essay", "Poetry", "Video"]
+        options: ["Image", "Essay", "Poetry", "Video", "Zine"]
       - label: "Order in issue"
         name: "order"
         widget: "number"
@@ -200,6 +200,17 @@ collections:
           - {label: "Youtube Video ID", name: "link", widget: "string", i18n: duplicate, required: false,  hint: "Please add only the Youtube video ID. You can find this by looking at the link and copy/pasting only the combination of letters and numbers at the end. Example: For a link like, https://www.youtube.com/watch?v=aygzWOiPusI, you would only copy/paste aygzWOiPusI into this field"}
           - {label: "Video Preview Image", name: "img", widget: "image", i18n: duplicate, required: false, hint: "Used on the Issue page"}
           - {label: "Image description", name: "alt", widget: "string", hint: "Add alt text for screen readers", required: false, i18n: true}
+      - label: 'Zine'
+        name: 'zine'
+        widget: 'object'
+        required: false
+        i18n: true
+        fields:
+        - {label: "PDF", name: "pdf", widget: "file", media_folder: "files", i18n: duplicate}
+        - {label: "Preview Image", name: "image", widget: "object", i18n: true, fields: [
+          {label: "Image", name: "image", widget: "image", i18n: duplicate},
+          {label: "Alt Text", name: "alt", widget: "string", i18n: true, required: false}
+        ]}      
   - name: "pdf-issues"
     label: "PDF Issues"
     label_singular: "PDF Issue"

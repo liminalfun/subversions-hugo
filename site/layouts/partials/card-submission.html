@@ -7,6 +7,9 @@
       {{ with .Params.video }}
         <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
       {{ end }}
+      {{ with .Params.zine.image }}
+        <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
+      {{ end }}
       <div class="label">
         <h4>{{ .Title }}</h4>
         <p>{{ .Params.artist.name }}</p>

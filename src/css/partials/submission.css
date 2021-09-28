@@ -33,7 +33,7 @@
   position: static;
   height: 100%;
   max-height: calc(var(--wrapper-height) - var(--spacing-extra-large));
-  overflow-y: scroll;
+  overflow-y: auto;
 
   .bg-texture {
     position: relative;
