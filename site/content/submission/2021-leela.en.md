@@ -1,12 +1,18 @@
 ---
 title: she/they
 year: "2021"
-genre: Poetry
+genre: Zine
 artist:
   name: Leela Shamash
   pronouns: they/them
   location: Tioh'tia:ke / "Montréal"
   bio: Leela is a writer and activist from Montreal. They are in the final year of
     their degree in Creative Writing and Women's Studies at Concordia.
-text: Upload Pending
+text: ""
+zine:
+  pdf: https://ucarecdn.com/0bc80575-4c54-4adf-ad8d-69c3eb8171f1/-/crop/456x608/0,0/-/preview/Screen
+    Shot 2021-10-02 at 2.25.53 PM.png
+  image:
+    image: https://ucarecdn.com/76da4e4b-1fca-4692-ac59-88ee899fe1b3/-/crop/455x606/0,2/-/preview/Screen
+      Shot 2021-10-02 at 2.25.53 PM.png
 ---
